@@ -1,0 +1,21 @@
+name: gallery
+description: Gallery project to showcase gyver_lamp_effects.
+version: 1.0.0
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  gyver_lamp_effects:
+    path: ../
+  gyver_lamp_ui:
+    path: ../../gyver_lamp_ui
+
+dev_dependencies:
+  very_good_analysis: 4.0.0
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,20 @@
+name: gyver_lamp_ui
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    paths:
+      - "packages/gyver_lamp_ui/**"
+      - ".github/workflows/gyver_lamp_ui.yaml"
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1.14.0
+    with:
+      flutter_channel: stable
+      working_directory: packages/gyver_lamp_ui

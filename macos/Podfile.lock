@@ -1,0 +1,41 @@
+PODS:
+  - FlutterMacOS (1.0.0)
+  - rive_common (0.0.1):
+    - FlutterMacOS
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - tactile_feedback (0.0.1):
+    - FlutterMacOS
+  - url_launcher_macos (0.0.1):
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - FlutterMacOS (from `Flutter/ephemeral`)
+  - rive_common (from `Flutter/ephemeral/.symlinks/plugins/rive_common/macos`)
+  - shared_preferences_foundation (from `Flutter/ephemeral/.symlinks/plugins/shared_preferences_foundation/darwin`)
+  - tactile_feedback (from `Flutter/ephemeral/.symlinks/plugins/tactile_feedback/macos`)
+  - url_launcher_macos (from `Flutter/ephemeral/.symlinks/plugins/url_launcher_macos/macos`)
+
+EXTERNAL SOURCES:
+  FlutterMacOS:
+    :path: Flutter/ephemeral
+  rive_common:
+    :path: Flutter/ephemeral/.symlinks/plugins/rive_common/macos
+  shared_preferences_foundation:
+    :path: Flutter/ephemeral/.symlinks/plugins/shared_preferences_foundation/darwin
+  tactile_feedback:
+    :path: Flutter/ephemeral/.symlinks/plugins/tactile_feedback/macos
+  url_launcher_macos:
+    :path: Flutter/ephemeral/.symlinks/plugins/url_launcher_macos/macos
+
+SPEC CHECKSUMS:
+  FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
+  rive_common: acedcab7802c0ece4b0d838b71d7deb637e1309a
+  shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
+  tactile_feedback: 1f7f76ae961b62210977f8dba73c625375326dd1
+  url_launcher_macos: d2691c7dd33ed713bf3544850a623080ec693d95
+
+PODFILE CHECKSUM: 26a9ef6e22b1baf146cad35eb793f54e5e50126f
+
+COCOAPODS: 1.13.0

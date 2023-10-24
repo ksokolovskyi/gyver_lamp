@@ -1,0 +1,219 @@
+{
+  "@@locale": "en",
+  "connect": "Connect",
+  "@connect": {
+    "description": "Label connect"
+  },
+  "skip": "Skip",
+  "@skip": {
+    "description": "Label skip"
+  },
+  "initialSetupPageTitle": "Add Your First Lamp",
+  "@initialSetupPageTitle": {
+    "description": "Title on the initial setup page"
+  },
+  "initialSetupFormDescription": "Fill in the details of your lamp to easily control it through the app. You can also do it later.",
+  "@initialSetupFormDescription": {
+    "description": "Text shown on top of the initial setup form"
+  },
+  "ip": "IP",
+  "@ip": {
+    "description": "Label IP"
+  },
+  "ipErrorHint": "Wrong IP format. Example: 192.168.0.1",
+  "@ipErrorHint": {
+    "description": "Error hint shown under IP field after wrong input"
+  },
+  "port": "Port",
+  "@port": {
+    "description": "Label port"
+  },
+  "portErrorHint": "Wrong port format. Example: 8888",
+  "@portErrorHint": {
+    "description": "Error hint shown under Port field after wrong input"
+  },
+  "notConnected": "Not Connected",
+  "@notConnected": {
+    "description": "Label not connected"
+  },
+  "connected": "Connected",
+  "@connected": {
+    "description": "Label connected"
+  },
+  "connecting": "Connecting",
+  "@connecting": {
+    "description": "Label connecting"
+  },
+  "brightness": "Brightness",
+  "@brightness": {
+    "description": "Label brightness"
+  },
+  "speed": "Speed",
+  "@speed": {
+    "description": "Label speed"
+  },
+  "scale": "Scale",
+  "@scale": {
+    "description": "Label scale"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Label settings"
+  },
+  "general": "General",
+  "@general": {
+    "description": "Label general settings"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Label language"
+  },
+  "darkMode": "Dark Mode",
+  "@darkMode": {
+    "description": "Label dark mode"
+  },
+  "getInTouch": "Get in Touch",
+  "@getInTouch": {
+    "description": "Label get in touch settings"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Label email"
+  },
+  "twitter": "Twitter",
+  "@twitter": {
+    "description": "Label twitter"
+  },
+  "dribbble": "Dribbble",
+  "@dribbble": {
+    "description": "Label dribbble"
+  },
+  "otherStuff": "Other Stuff",
+  "@otherStuff": {
+    "description": "Label other stuff settings"
+  },
+  "lampProject": "Lamp Project",
+  "@lampProject": {
+    "description": "Label lamp project"
+  },
+  "credits": "Credits",
+  "@credits": {
+    "description": "Label credits"
+  },
+  "privacyPolicy": "Privacy Policy",
+  "@privacyPolicy": {
+    "description": "Label privacy policy"
+  },
+  "termsOfUse": "Terms Of Use",
+  "@termsOfUse": {
+    "description": "Label terms of use"
+  },
+  "wrongFormat": "Wrong format",
+  "@wrongFormat": {
+    "description": "Label wrong format"
+  },
+  "connectDialogTitle": "Connect lamp",
+  "@connectDialogTitle": {
+    "description": "Title text in connect dialog"
+  },
+  "disconnectDialogTitle": "Disconnect from lamp",
+  "@disconnectDialogTitle": {
+    "description": "Title text in disconnect dialog"
+  },
+  "disconnectDialogBody": "Are you sure you want to disconnect the phone from the lamp?",
+  "@disconnectDialogBody": {
+    "description": "Body text in disconnect dialog"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Label cancel"
+  },
+  "disconnect": "Disconnect",
+  "@disconnect": {
+    "description": "Label disconnect"
+  },
+  "sparklesMode": "Sparkles",
+  "@sparklesMode": {
+    "description": "Label for the sparkles mode"
+  },
+  "fireMode": "Fire",
+  "@fireMode": {
+    "description": "Label for the fire mode"
+  },
+  "rainbowVerticalMode": "Rainbow Vertical",
+  "@rainbowVerticalMode": {
+    "description": "Label for the rainbow vertical mode"
+  },
+  "rainbowHorizontalMode": "Rainbow Horizontal",
+  "@rainbowHorizontalMode": {
+    "description": "Label for the rainbow horizontal mode"
+  },
+  "colorsMode": "Colors",
+  "@colorsMode": {
+    "description": "Label for the colors mode"
+  },
+  "madnessMode": "Madness",
+  "@madnessMode": {
+    "description": "Label for the madness mode"
+  },
+  "cloudsMode": "Clouds",
+  "@cloudsMode": {
+    "description": "Label for the clouds mode"
+  },
+  "lavaMode": "Lava",
+  "@lavaMode": {
+    "description": "Label for the lava mode"
+  },
+  "plasmaMode": "Plasma",
+  "@plasmaMode": {
+    "description": "Label for the plasma mode"
+  },
+  "rainbowMode": "Rainbow",
+  "@rainbowMode": {
+    "description": "Label for the rainbow mode"
+  },
+  "rainbowStripesMode": "Rainbow Stripes",
+  "@rainbowStripesMode": {
+    "description": "Label for the rainbow stripes mode"
+  },
+  "zebraMode": "Zebra",
+  "@zebraMode": {
+    "description": "Label for the zebra mode"
+  },
+  "forestMode": "Forest",
+  "@forestMode": {
+    "description": "Label for the forest mode"
+  },
+  "oceanMode": "Ocean",
+  "@oceanMode": {
+    "description": "Label for the ocean mode"
+  },
+  "colorMode": "Color",
+  "@colorMode": {
+    "description": "Label for the color mode"
+  },
+  "snowMode": "Snow",
+  "@snowMode": {
+    "description": "Label for the snow mode"
+  },
+  "matrixMode": "Matrix",
+  "@matrixMode": {
+    "description": "Label for the matrix mode"
+  },
+  "firefliesMode": "Fireflies",
+  "@firefliesMode": {
+    "description": "Label for the fireflies mode"
+  },
+  "connectionFailed": "Error while connecting to the lamp. Please check IP and Port and try again.",
+  "@connectionFailed": {
+    "description": "Error text shown after unsuccessful connection attempt"
+  },
+  "lampIsOn": "Lamp is ON.",
+  "@lampIsOn": {
+    "description": "Text shown after lamp is toggled on"
+  },
+  "lampIsOff": "Lamp is OFF.",
+  "@lampIsOff": {
+    "description": "Text shown after lamp is toggled off"
+  }
+}

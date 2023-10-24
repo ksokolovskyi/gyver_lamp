@@ -1,0 +1,23 @@
+name: gyver_lamp_effects
+description: Gyver Lamp Effects
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  gyver_lamp_icons:
+    path: ../gyver_lamp_icons
+  gyver_lamp_ui:
+    path: ../gyver_lamp_ui
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: 1.0.1
+  very_good_analysis: 5.1.0

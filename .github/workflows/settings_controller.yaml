@@ -1,0 +1,20 @@
+name: settings_controller
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    paths:
+      - "packages/settings_controller/**"
+      - ".github/workflows/settings_controller.yaml"
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1.14.0
+    with:
+      flutter_channel: stable
+      working_directory: packages/settings_controller

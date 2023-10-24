@@ -1,0 +1,23 @@
+name: gyver_lamp_icons
+description: Icons set for Gyver Lamp.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: 5.1.0
+
+flutter:
+  fonts:
+    - family: GyverLampIcons
+      fonts:
+        - asset: assets/fonts/GyverLampIcons.ttf

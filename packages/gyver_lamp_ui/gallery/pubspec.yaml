@@ -1,0 +1,32 @@
+name: gallery
+description: Gallery project to showcase gyver_lamp_ui.
+version: 1.0.0
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  dashbook: 0.1.12
+  flutter:
+    sdk: flutter
+  gyver_lamp_icons:
+    path: ../../gyver_lamp_icons
+  gyver_lamp_ui:
+    path: ../
+
+dev_dependencies:
+  very_good_analysis: 4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/button.png
+    - assets/images/palette.png
+    - assets/images/typography.png
+  
+  fonts:
+    - family: Figtree
+      fonts:
+        - asset: assets/fonts/Figtree-Regular.ttf

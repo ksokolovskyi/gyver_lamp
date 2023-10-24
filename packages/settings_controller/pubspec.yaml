@@ -1,0 +1,20 @@
+name: settings_controller
+description: Controller to manage settings.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.18.1
+  shared_preferences: ^2.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: 1.0.0
+  very_good_analysis: 5.1.0

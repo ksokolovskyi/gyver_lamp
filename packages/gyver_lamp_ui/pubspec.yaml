@@ -1,0 +1,34 @@
+name: gyver_lamp_ui
+description: UI Toolkit for Gyver Lamp
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  gap: ^3.0.1
+  gyver_lamp_icons:
+    path: ../gyver_lamp_icons
+  meta: ^1.9.1
+  tactile_feedback:
+    git: 
+      url: https://github.com/ksokolovskyi/tactile_feedback
+      ref: 014245c2d2c2a0a888c37fc63a016141f10956c8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockingjay: 0.4.0
+  mocktail: 1.0.0
+  plugin_platform_interface: 2.1.4
+  very_good_analysis: 5.1.0
+
+flutter:
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
