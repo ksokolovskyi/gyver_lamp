@@ -17,17 +17,31 @@ Huge thanks to [Iryna][dribbble_link] for the design and support ❤️
 
 ### Animated splash screen made with [Rive][rive_link]
 
+https://github.com/ksokolovskyi/gyver_lamp/assets/30288967/c7e6f231-54b6-4ffa-aa87-e4f2fef2c3ef
+
 Thanks to [JcToon][rive_animation_link] for publishing the animation.
 
 ### Straightforward connection process and automatic reconnect
 
+https://github.com/ksokolovskyi/gyver_lamp/assets/30288967/8a57c180-f5f7-435f-bc50-ce9db84aa110
+
 ### Animated preview of all supported effects
+
+https://github.com/ksokolovskyi/gyver_lamp/assets/30288967/0bb0bd96-11b6-4cb5-b211-96cc88636989
+
+https://github.com/ksokolovskyi/gyver_lamp/assets/30288967/2e058762-97c1-47b8-907d-4537d9c2f405
 
 ### Intuitive controls with real-time preview
 
+https://github.com/ksokolovskyi/gyver_lamp/assets/30288967/bdc059bf-830a-440e-9863-f98dad767f24
+
 ### Multi-language support
 
+https://github.com/ksokolovskyi/gyver_lamp/assets/30288967/c9b1042d-d8dc-4ef2-9ac6-73cf19355381
+
 ### Dark mode support
+
+https://github.com/ksokolovskyi/gyver_lamp/assets/30288967/0d9766bc-2abe-46f8-b609-8308bcf2d0cd
 
 ---
 
