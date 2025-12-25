@@ -3,9 +3,9 @@ description: Icons set for Gyver Lamp.
 version: 1.0.0
 publish_to: none
 
+resolution: workspace
 environment:
-  sdk: '>=3.0.1 <4.0.0'
-  flutter: ">=3.10.0"
+  sdk: ^3.9.2
 
 dependencies:
   flutter:
@@ -14,7 +14,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  very_good_analysis: 5.1.0
+  very_good_analysis: ^10.0.0
 
 flutter:
   fonts:
