@@ -39,8 +39,8 @@ Future<void> main() async {
 
           final initialConnectionData =
               !initialSetupCompleted || address == null || port == null
-                  ? null
-                  : ConnectionData(address: address, port: port);
+              ? null
+              : ConnectionData(address: address, port: port);
 
           return AppData(
             connectionRepository: ConnectionRepository(client: client),

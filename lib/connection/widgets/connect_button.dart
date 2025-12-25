@@ -39,8 +39,8 @@ class ConnectButton extends StatelessWidget {
           onPressed: !state.isConnecting && state.isLampDataValid
               ? () {
                   context.read<ConnectionBloc>().add(
-                        const ConnectionRequested(),
-                      );
+                    const ConnectionRequested(),
+                  );
                 }
               : null,
           child: AnimatedSwitcher(
@@ -61,18 +61,19 @@ class ConnectButton extends StatelessWidget {
                 ),
               );
             },
-            layoutBuilder: (
-              Widget? currentChild,
-              List<Widget> previousChildren,
-            ) {
-              return Stack(
-                alignment: Alignment.center,
-                children: <Widget>[
-                  ...previousChildren,
-                  if (currentChild != null) currentChild,
-                ],
-              );
-            },
+            layoutBuilder:
+                (
+                  Widget? currentChild,
+                  List<Widget> previousChildren,
+                ) {
+                  return Stack(
+                    alignment: Alignment.center,
+                    children: <Widget>[
+                      ...previousChildren,
+                      if (currentChild != null) currentChild,
+                    ],
+                  );
+                },
             child: state.isConnecting
                 // Need this Stack to make button width remain the same when
                 // loading indicator is shown.

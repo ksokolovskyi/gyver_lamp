@@ -9,28 +9,28 @@ class OceanFramesGenerator extends NoiseFramesGenerator {
   OceanFramesGenerator({
     required super.dimension,
   }) : super(
-          blur: 20,
-          looped: true,
-          palette: const [
-            FastLedColors.midnightBlue,
-            FastLedColors.darkBlue,
-            FastLedColors.midnightBlue,
-            FastLedColors.navy,
-            //
-            FastLedColors.darkBlue,
-            FastLedColors.mediumBlue,
-            FastLedColors.seaGreen,
-            FastLedColors.teal,
-            //
-            FastLedColors.cadetBlue,
-            FastLedColors.blue,
-            FastLedColors.darkCyan,
-            FastLedColors.cornflowerBlue,
-            //
-            FastLedColors.aquamarine,
-            FastLedColors.seaGreen,
-            FastLedColors.aqua,
-            FastLedColors.lightSkyBlue,
-          ],
-        );
+         blur: 20,
+         looped: true,
+         palette: const [
+           FastLedColors.midnightBlue,
+           FastLedColors.darkBlue,
+           FastLedColors.midnightBlue,
+           FastLedColors.navy,
+           //
+           FastLedColors.darkBlue,
+           FastLedColors.mediumBlue,
+           FastLedColors.seaGreen,
+           FastLedColors.teal,
+           //
+           FastLedColors.cadetBlue,
+           FastLedColors.blue,
+           FastLedColors.darkCyan,
+           FastLedColors.cornflowerBlue,
+           //
+           FastLedColors.aquamarine,
+           FastLedColors.seaGreen,
+           FastLedColors.aqua,
+           FastLedColors.lightSkyBlue,
+         ],
+       );
 }

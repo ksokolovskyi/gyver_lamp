@@ -8,8 +8,9 @@ class IpAddressInput extends FormzInput<String, IpAddressInputValidationError>
 
   IpAddressInput.dirty([super.value = '']) : super.dirty();
 
-  static final _ipRegExp =
-      RegExp(r'^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}$');
+  static final _ipRegExp = RegExp(
+    r'^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}$',
+  );
 
   @override
   IpAddressInputValidationError? validator(String value) {

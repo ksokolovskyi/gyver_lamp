@@ -81,30 +81,32 @@ class _CirclesWaveLoadingIndicatorState
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              ..._animations.map(
-                (animation) {
-                  return AnimatedBuilder(
-                    animation: animation,
-                    builder: (context, child) {
-                      return Transform.translate(
-                        offset: Offset(0, widget.size * animation.value),
-                        child: child,
+              ..._animations
+                  .map(
+                    (animation) {
+                      return AnimatedBuilder(
+                        animation: animation,
+                        builder: (context, child) {
+                          return Transform.translate(
+                            offset: Offset(0, widget.size * animation.value),
+                            child: child,
+                          );
+                        },
+                        child: SizedBox.square(
+                          dimension: widget.size,
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: widget.color,
+                            ),
+                          ),
+                        ),
                       );
                     },
-                    child: SizedBox.square(
-                      dimension: widget.size,
-                      child: DecoratedBox(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: widget.color,
-                        ),
-                      ),
-                    ),
-                  );
-                },
-              ).intersperse(
-                SizedBox(width: widget.size / 2),
-              ),
+                  )
+                  .intersperse(
+                    SizedBox(width: widget.size / 2),
+                  ),
             ],
           ),
         ),

@@ -48,8 +48,8 @@ class _PortFieldState extends State<PortField> {
           enabled: !state.isConnecting,
           onChanged: (port) {
             context.read<ConnectionBloc>().add(
-                  PortUpdated(port: int.tryParse(port)),
-                );
+              PortUpdated(port: int.tryParse(port)),
+            );
           },
         );
       },

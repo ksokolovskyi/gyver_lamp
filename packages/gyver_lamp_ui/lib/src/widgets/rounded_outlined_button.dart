@@ -62,10 +62,10 @@ class RoundedOutlinedButton extends StatefulWidget {
 
   /// The height of the button.
   double get height => switch (size) {
-        (RoundedOutlinedButtonSize.small) => 32,
-        (RoundedOutlinedButtonSize.medium) => 40,
-        (RoundedOutlinedButtonSize.large) => 48,
-      };
+    (RoundedOutlinedButtonSize.small) => 32,
+    (RoundedOutlinedButtonSize.medium) => 40,
+    (RoundedOutlinedButtonSize.large) => 48,
+  };
 
   @override
   State<RoundedOutlinedButton> createState() => RoundedOutlinedButtonState();
@@ -120,19 +120,19 @@ class RoundedOutlinedButtonState extends State<RoundedOutlinedButton> {
                   horizontal: GyverLampSpacings.lg,
                 ),
                 child: DefaultTextStyle(
-                  style: switch (widget.size) {
-                    (RoundedOutlinedButtonSize.small) =>
-                      GyverLampTextStyles.buttonSmallBold,
-                    (RoundedOutlinedButtonSize.medium) =>
-                      GyverLampTextStyles.buttonMediumBold,
-                    (RoundedOutlinedButtonSize.large) =>
-                      GyverLampTextStyles.buttonLargeBold,
-                  }
-                      .copyWith(
-                    color: widget.onPressed != null
-                        ? theme.textSecondary
-                        : theme.textSecondary.withOpacity(0.5),
-                  ),
+                  style:
+                      switch (widget.size) {
+                        (RoundedOutlinedButtonSize.small) =>
+                          GyverLampTextStyles.buttonSmallBold,
+                        (RoundedOutlinedButtonSize.medium) =>
+                          GyverLampTextStyles.buttonMediumBold,
+                        (RoundedOutlinedButtonSize.large) =>
+                          GyverLampTextStyles.buttonLargeBold,
+                      }.copyWith(
+                        color: widget.onPressed != null
+                            ? theme.textSecondary
+                            : theme.textSecondary.withOpacity(0.5),
+                      ),
                   overflow: TextOverflow.ellipsis,
                   child: Row(
                     mainAxisSize: MainAxisSize.min,

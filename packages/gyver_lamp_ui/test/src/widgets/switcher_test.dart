@@ -278,37 +278,39 @@ void main() {
       expect(tester.binding.hasScheduledFrame, isFalse);
     });
 
-    testWidgets('animates back when update value is not passed into the widget',
-        (tester) async {
-      var wasToggled = false;
+    testWidgets(
+      'animates back when update value is not passed into the widget',
+      (tester) async {
+        var wasToggled = false;
 
-      await tester.pumpSubject(
-        Switcher(
-          value: false,
-          onChanged: (value) {
-            wasToggled = true;
-          },
-        ),
-      );
+        await tester.pumpSubject(
+          Switcher(
+            value: false,
+            onChanged: (value) {
+              wasToggled = true;
+            },
+          ),
+        );
 
-      await tester.pump();
+        await tester.pump();
 
-      final state = tester.state<SwitcherState>(find.byType(Switcher));
+        final state = tester.state<SwitcherState>(find.byType(Switcher));
 
-      expect(state.value, isFalse);
-      expect(tester.binding.hasScheduledFrame, isFalse);
+        expect(state.value, isFalse);
+        expect(tester.binding.hasScheduledFrame, isFalse);
 
-      await tester.tap(find.byType(Switcher));
+        await tester.tap(find.byType(Switcher));
 
-      expect(wasToggled, isTrue);
-      expect(state.value, isFalse);
+        expect(wasToggled, isTrue);
+        expect(state.value, isFalse);
 
-      expect(tester.binding.hasScheduledFrame, isTrue);
+        expect(tester.binding.hasScheduledFrame, isTrue);
 
-      await tester.pumpAndSettle();
+        await tester.pumpAndSettle();
 
-      expect(tester.binding.hasScheduledFrame, isFalse);
-    });
+        expect(tester.binding.hasScheduledFrame, isFalse);
+      },
+    );
 
     testWidgets('animates thumb on press', (tester) async {
       await tester.pumpSubject(

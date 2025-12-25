@@ -55,11 +55,11 @@ class CustomDropdownButton<T extends Object> extends StatefulWidget {
     this.menuMaxHeight,
     super.key,
   }) : assert(
-          items.isEmpty || items.where((i) => i.value == selected).length == 1,
-          'There should be exactly one item with value: $selected.\n'
-          'Either zero or 2 or more [DropdownMenuItem]s were detected '
-          'with the same value.',
-        );
+         items.isEmpty || items.where((i) => i.value == selected).length == 1,
+         'There should be exactly one item with value: $selected.\n'
+         'Either zero or 2 or more [DropdownMenuItem]s were detected '
+         'with the same value.',
+       );
 
   /// The list of items the user can select.
   final List<CustomDropdownMenuItem<T>> items;
@@ -79,7 +79,8 @@ class CustomDropdownButton<T extends Object> extends StatefulWidget {
 }
 
 class _CustomDropdownButtonState<T extends Object>
-    extends State<CustomDropdownButton<T>> with WidgetsBindingObserver {
+    extends State<CustomDropdownButton<T>>
+    with WidgetsBindingObserver {
   final ValueNotifier<bool> _isOpen = ValueNotifier<bool>(false);
 
   late int _selectedIndex;
@@ -240,27 +241,28 @@ class _CustomDropdownButtonState<T extends Object>
                           ),
                         );
                       },
-                      layoutBuilder: (
-                        Widget? currentChild,
-                        List<Widget> previousChildren,
-                      ) {
-                        final Widget? previousChild;
+                      layoutBuilder:
+                          (
+                            Widget? currentChild,
+                            List<Widget> previousChildren,
+                          ) {
+                            final Widget? previousChild;
 
-                        if (previousChildren.isEmpty) {
-                          previousChild = null;
-                        } else {
-                          previousChild = previousChildren.first;
-                        }
+                            if (previousChildren.isEmpty) {
+                              previousChild = null;
+                            } else {
+                              previousChild = previousChildren.first;
+                            }
 
-                        return Stack(
-                          clipBehavior: Clip.antiAlias,
-                          alignment: AlignmentDirectional.centerStart,
-                          children: <Widget>[
-                            if (previousChild != null) previousChild,
-                            if (currentChild != null) currentChild,
-                          ],
-                        );
-                      },
+                            return Stack(
+                              clipBehavior: Clip.antiAlias,
+                              alignment: AlignmentDirectional.centerStart,
+                              children: <Widget>[
+                                if (previousChild != null) previousChild,
+                                if (currentChild != null) currentChild,
+                              ],
+                            );
+                          },
                       child: Text(
                         widget.items[_selectedIndex].label,
                         key: ValueKey(widget.selected),
@@ -360,28 +362,29 @@ class _CustomDropdownRoute<T extends Object> extends PopupRoute<T> {
     Animation<double> secondaryAnimation,
   ) {
     return LayoutBuilder(
-      builder: (
-        BuildContext context,
-        BoxConstraints constraints,
-      ) {
-        if (scrollController == null) {
-          final menuLimits = getMenuLimits(
-            constraints.maxHeight,
-            selectedIndex,
-          );
+      builder:
+          (
+            BuildContext context,
+            BoxConstraints constraints,
+          ) {
+            if (scrollController == null) {
+              final menuLimits = getMenuLimits(
+                constraints.maxHeight,
+                selectedIndex,
+              );
 
-          scrollController = ScrollController(
-            initialScrollOffset: menuLimits.scrollOffset,
-          );
-        }
+              scrollController = ScrollController(
+                initialScrollOffset: menuLimits.scrollOffset,
+              );
+            }
 
-        return _CustomDropdownRoutePage<T>(
-          route: this,
-          menuConstraints: constraints,
-          selectedIndex: selectedIndex,
-          capturedThemes: capturedThemes,
-        );
-      },
+            return _CustomDropdownRoutePage<T>(
+              route: this,
+              menuConstraints: constraints,
+              selectedIndex: selectedIndex,
+              capturedThemes: capturedThemes,
+            );
+          },
     );
   }
 
@@ -716,12 +719,12 @@ class _CustomDropdownMenuBackgroundPainter extends CustomPainter {
     required this.color,
     required this.shadow,
     required this.resize,
-  })  : _painter = BoxDecoration(
-          color: color,
-          borderRadius: _kBorderRadius,
-          boxShadow: [shadow],
-        ).createBoxPainter(),
-        super(repaint: resize);
+  }) : _painter = BoxDecoration(
+         color: color,
+         borderRadius: _kBorderRadius,
+         boxShadow: [shadow],
+       ).createBoxPainter(),
+       super(repaint: resize);
 
   final Color color;
 

@@ -77,7 +77,8 @@ abstract class NoiseFramesGenerator extends FramesGenerator {
 
         if (dataSmoothing != 0) {
           final old = _noise[i * dimension + j];
-          data = FastLedMath.scale8(old, dataSmoothing) +
+          data =
+              FastLedMath.scale8(old, dataSmoothing) +
               FastLedMath.scale8(data, 256 - dataSmoothing);
         }
 

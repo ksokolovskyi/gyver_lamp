@@ -62,10 +62,10 @@ class FlatTextButton extends StatelessWidget {
 
   /// The height of the button.
   double get height => switch (size) {
-        (FlatTextButtonSize.small) => 32,
-        (FlatTextButtonSize.medium) => 40,
-        (FlatTextButtonSize.large) => 48,
-      };
+    (FlatTextButtonSize.small) => 32,
+    (FlatTextButtonSize.medium) => 40,
+    (FlatTextButtonSize.large) => 48,
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -94,19 +94,19 @@ class FlatTextButton extends StatelessWidget {
                 horizontal: GyverLampSpacings.lg,
               ),
               child: DefaultTextStyle(
-                style: switch (size) {
-                  (FlatTextButtonSize.small) =>
-                    GyverLampTextStyles.buttonSmallBold,
-                  (FlatTextButtonSize.medium) =>
-                    GyverLampTextStyles.buttonMediumBold,
-                  (FlatTextButtonSize.large) =>
-                    GyverLampTextStyles.buttonLargeBold,
-                }
-                    .copyWith(
-                  color: onPressed != null
-                      ? theme.textSecondary
-                      : theme.textSecondary.withOpacity(0.5),
-                ),
+                style:
+                    switch (size) {
+                      (FlatTextButtonSize.small) =>
+                        GyverLampTextStyles.buttonSmallBold,
+                      (FlatTextButtonSize.medium) =>
+                        GyverLampTextStyles.buttonMediumBold,
+                      (FlatTextButtonSize.large) =>
+                        GyverLampTextStyles.buttonLargeBold,
+                    }.copyWith(
+                      color: onPressed != null
+                          ? theme.textSecondary
+                          : theme.textSecondary.withOpacity(0.5),
+                    ),
                 overflow: TextOverflow.ellipsis,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,

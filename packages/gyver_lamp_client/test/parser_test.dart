@@ -31,8 +31,7 @@ void main() {
       );
     });
 
-    test(
-        'throws GyverLampResponseParseException '
+    test('throws GyverLampResponseParseException '
         'when GyverLampCurrentResponse is malformed', () {
       expect(
         () => parseResponse('$currentPrefix xxx 2 3 4 0'),
@@ -51,8 +50,7 @@ void main() {
       );
     });
 
-    test(
-        'throws GyverLampResponseParseException '
+    test('throws GyverLampResponseParseException '
         'when GyverLampOkResponse is malformed', () {
       expect(
         () => parseResponse(okPrefix),
@@ -71,8 +69,7 @@ void main() {
       );
     });
 
-    test(
-        'throws GyverLampResponseParseException '
+    test('throws GyverLampResponseParseException '
         'when GyverLampBrightnessResponse is malformed', () {
       expect(
         () => parseResponse('$brightnessPrefix xxx'),
@@ -91,8 +88,7 @@ void main() {
       );
     });
 
-    test(
-        'throws GyverLampResponseParseException '
+    test('throws GyverLampResponseParseException '
         'when GyverLampSpeedResponse is malformed', () {
       expect(
         () => parseResponse('$speedPrefix xxx'),
@@ -111,8 +107,7 @@ void main() {
       );
     });
 
-    test(
-        'throws GyverLampResponseParseException '
+    test('throws GyverLampResponseParseException '
         'when GyverLampScaleResponse is malformed', () {
       expect(
         () => parseResponse('$scalePrefix xxx'),
@@ -122,8 +117,7 @@ void main() {
       );
     });
 
-    test(
-        'returns GyverLampUnknownResponse '
+    test('returns GyverLampUnknownResponse '
         'when unknown prefix is specified', () {
       expect(
         parseResponse('X 1'),

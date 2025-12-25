@@ -44,9 +44,11 @@ Future<void> bootstrap(BootstrapBuilder builder) async {
       }
 
       Logger.root.onRecord.listen((record) {
-        debugPrint('${record.level.name}: ${record.time}: '
-            '${record.loggerName}: '
-            '${record.message}');
+        debugPrint(
+          '${record.level.name}: ${record.time}: '
+          '${record.loggerName}: '
+          '${record.message}',
+        );
       });
 
       runApp(builder());

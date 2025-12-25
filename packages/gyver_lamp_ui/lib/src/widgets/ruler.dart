@@ -71,13 +71,13 @@ int _getIndexFromOffset({
 /// Must be used with a scrollable that uses a [_RulerScrollController].
 class _RulerScrollPhysics extends ScrollPhysics {
   const _RulerScrollPhysics()
-      // coverage:ignore-start
-      : super(
-          // coverage:ignore-end
-          parent: const BouncingScrollPhysics(
-            parent: RangeMaintainingScrollPhysics(),
-          ),
-        );
+    // coverage:ignore-start
+    : super(
+        // coverage:ignore-end
+        parent: const BouncingScrollPhysics(
+          parent: RangeMaintainingScrollPhysics(),
+        ),
+      );
 
   @override
   _RulerScrollPhysics applyTo(ScrollPhysics? ancestor) {
@@ -86,10 +86,10 @@ class _RulerScrollPhysics extends ScrollPhysics {
 
   @override
   SpringDescription get spring => const SpringDescription(
-        mass: 1,
-        stiffness: 180,
-        damping: 28,
-      );
+    mass: 1,
+    stiffness: 180,
+    damping: 28,
+  );
 
   @override
   Simulation? createBallisticSimulation(
@@ -277,18 +277,22 @@ class _RulerScrollMetrics extends FixedScrollMetrics {
     int? itemIndex,
   }) {
     return _RulerScrollMetrics(
-      minScrollExtent: minScrollExtent ??
+      minScrollExtent:
+          minScrollExtent ??
           (hasContentDimensions ? this.minScrollExtent : null),
-      maxScrollExtent: maxScrollExtent ??
+      maxScrollExtent:
+          maxScrollExtent ??
           (hasContentDimensions ? this.maxScrollExtent : null),
       pixels: pixels ?? (hasPixels ? this.pixels : null),
-      viewportDimension: viewportDimension ??
+      viewportDimension:
+          viewportDimension ??
           (hasViewportDimension ? this.viewportDimension : null),
       axisDirection: axisDirection ?? this.axisDirection,
       devicePixelRatio: devicePixelRatio ?? this.devicePixelRatio,
       itemIndex: itemIndex ?? this.itemIndex,
     );
   }
+
   // coverage:ignore-end
 }
 
@@ -303,12 +307,12 @@ class _RulerScrollPosition extends ScrollPositionWithSingleContext
     required int initialItem,
     super.oldPosition,
   }) : super(
-          initialPixels: _getOffsetFromIndex(
-            index: initialItem,
-            itemExtent: itemExtent,
-            gapExtent: gapExtent,
-          ),
-        );
+         initialPixels: _getOffsetFromIndex(
+           index: initialItem,
+           itemExtent: itemExtent,
+           gapExtent: gapExtent,
+         ),
+       );
 
   final double itemExtent;
 
@@ -336,12 +340,15 @@ class _RulerScrollPosition extends ScrollPositionWithSingleContext
     int? itemIndex,
   }) {
     return _RulerScrollMetrics(
-      minScrollExtent: minScrollExtent ??
+      minScrollExtent:
+          minScrollExtent ??
           (hasContentDimensions ? this.minScrollExtent : null),
-      maxScrollExtent: maxScrollExtent ??
+      maxScrollExtent:
+          maxScrollExtent ??
           (hasContentDimensions ? this.maxScrollExtent : null),
       pixels: pixels ?? (hasPixels ? this.pixels : null),
-      viewportDimension: viewportDimension ??
+      viewportDimension:
+          viewportDimension ??
           (hasViewportDimension ? this.viewportDimension : null),
       axisDirection: axisDirection ?? this.axisDirection,
       devicePixelRatio: devicePixelRatio ?? this.devicePixelRatio,
@@ -421,11 +428,13 @@ class _AnimatedValueTextState
 
   @override
   void forEachTween(TweenVisitor<dynamic> visitor) {
-    _valueTween = visitor(
-      _valueTween,
-      widget.value,
-      (value) => IntTween(begin: value as int),
-    )! as IntTween;
+    _valueTween =
+        visitor(
+              _valueTween,
+              widget.value,
+              (value) => IntTween(begin: value as int),
+            )!
+            as IntTween;
   }
 
   @override
@@ -492,9 +501,9 @@ class Ruler extends StatefulWidget {
     required this.onChanged,
     super.key,
   }) : assert(
-          value > 0 && value <= maxValue,
-          'value have to be in range [1, maxValue]',
-        );
+         value > 0 && value <= maxValue,
+         'value have to be in range [1, maxValue]',
+       );
 
   /// The current value of the ruler.
   final int value;

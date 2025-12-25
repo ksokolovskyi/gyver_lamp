@@ -33,8 +33,9 @@ final class VerticalRainbowFramesGenerator extends FramesGenerator {
     );
 
     for (var y = 0; y < dimension; y++) {
-      final hue =
-          (_hue + (dimension - y) * scale).toUnsigned(8).remap(0, 255, 0, 360);
+      final hue = (_hue + (dimension - y) * scale)
+          .toUnsigned(8)
+          .remap(0, 255, 0, 360);
 
       final color = HSLColor.fromAHSL(1, hue, 1, 0.7).toColor();
 

@@ -47,9 +47,9 @@ class ControlRulers extends StatelessWidget {
                       value: state.brightness,
                       maxValue: 255,
                       onChanged: (brightness) {
-                        context
-                            .read<ControlBloc>()
-                            .add(BrightnessUpdated(brightness: brightness));
+                        context.read<ControlBloc>().add(
+                          BrightnessUpdated(brightness: brightness),
+                        );
                       },
                     );
                   },
@@ -62,9 +62,9 @@ class ControlRulers extends StatelessWidget {
                       value: state.speed,
                       maxValue: 255,
                       onChanged: (speed) {
-                        context
-                            .read<ControlBloc>()
-                            .add(SpeedUpdated(speed: speed));
+                        context.read<ControlBloc>().add(
+                          SpeedUpdated(speed: speed),
+                        );
                       },
                     );
                   },
@@ -77,9 +77,9 @@ class ControlRulers extends StatelessWidget {
                       value: state.scale,
                       maxValue: 255,
                       onChanged: (scale) {
-                        context
-                            .read<ControlBloc>()
-                            .add(ScaleUpdated(scale: scale));
+                        context.read<ControlBloc>().add(
+                          ScaleUpdated(scale: scale),
+                        );
                       },
                     );
                   },

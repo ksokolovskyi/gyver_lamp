@@ -27,18 +27,18 @@ class ControlPage extends StatelessWidget {
           isConnected: connectionState.isConnected,
           connectionData: connectionState.connectionData,
         )..add(
-            const ControlRequested(),
-          );
+          const ControlRequested(),
+        );
       },
       child: BlocListener<ConnectionBloc, ConnectionState>(
         listenWhen: (p, c) => p.isConnected != c.isConnected,
         listener: (context, state) {
           context.read<ControlBloc>().add(
-                ConnectionStateUpdated(
-                  isConnected: state.isConnected,
-                  connectionData: state.connectionData,
-                ),
-              );
+            ConnectionStateUpdated(
+              isConnected: state.isConnected,
+              connectionData: state.connectionData,
+            ),
+          );
         },
         child: const ControlView(),
       ),

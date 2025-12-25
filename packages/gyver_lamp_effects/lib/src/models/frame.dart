@@ -13,14 +13,14 @@ final class Frame extends Equatable {
   Frame({
     required this.dimension,
     required this.data,
-  })  : assert(
-          dimension > 0,
-          'dimension must be greater that 0',
-        ),
-        assert(
-          data.length == dimension * dimension,
-          'data length must be equal to dimension^2',
-        );
+  }) : assert(
+         dimension > 0,
+         'dimension must be greater that 0',
+       ),
+       assert(
+         data.length == dimension * dimension,
+         'data length must be equal to dimension^2',
+       );
 
   /// The length of the frame's side.
   final int dimension;

@@ -53,9 +53,9 @@ class FlatIconButton extends StatelessWidget {
 
   /// Length of the button's side.
   double get dimension => switch (size) {
-        FlatIconButtonSize.medium => 32,
-        FlatIconButtonSize.large => 44,
-      };
+    FlatIconButtonSize.medium => 32,
+    FlatIconButtonSize.large => 44,
+  };
 
   @override
   Widget build(BuildContext context) {

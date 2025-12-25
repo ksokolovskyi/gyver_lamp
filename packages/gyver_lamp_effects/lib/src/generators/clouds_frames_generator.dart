@@ -9,28 +9,28 @@ class CloudsFramesGenerator extends NoiseFramesGenerator {
   CloudsFramesGenerator({
     required super.dimension,
   }) : super(
-          blur: 20,
-          looped: true,
-          palette: const [
-            FastLedColors.blue,
-            FastLedColors.darkBlue,
-            FastLedColors.darkBlue,
-            FastLedColors.darkBlue,
-            //
-            FastLedColors.darkBlue,
-            FastLedColors.darkBlue,
-            FastLedColors.darkBlue,
-            FastLedColors.darkBlue,
-            //
-            FastLedColors.blue,
-            FastLedColors.darkBlue,
-            FastLedColors.skyBlue,
-            FastLedColors.skyBlue,
-            //
-            FastLedColors.lightBlue,
-            FastLedColors.white,
-            FastLedColors.lightBlue,
-            FastLedColors.skyBlue,
-          ],
-        );
+         blur: 20,
+         looped: true,
+         palette: const [
+           FastLedColors.blue,
+           FastLedColors.darkBlue,
+           FastLedColors.darkBlue,
+           FastLedColors.darkBlue,
+           //
+           FastLedColors.darkBlue,
+           FastLedColors.darkBlue,
+           FastLedColors.darkBlue,
+           FastLedColors.darkBlue,
+           //
+           FastLedColors.blue,
+           FastLedColors.darkBlue,
+           FastLedColors.skyBlue,
+           FastLedColors.skyBlue,
+           //
+           FastLedColors.lightBlue,
+           FastLedColors.white,
+           FastLedColors.lightBlue,
+           FastLedColors.skyBlue,
+         ],
+       );
 }

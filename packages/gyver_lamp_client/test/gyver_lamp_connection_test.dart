@@ -293,8 +293,7 @@ void main() {
         );
       });
 
-      test(
-          'does not call close '
+      test('does not call close '
           'when the events stream has write event', () async {
         await subject.bind();
 
@@ -337,8 +336,7 @@ void main() {
     });
 
     group('send', () {
-      test(
-          'creates socket and subscribes to the events '
+      test('creates socket and subscribes to the events '
           'when connection is closed', () async {
         expect(
           subject.isClosed,
@@ -408,8 +406,7 @@ void main() {
         );
       });
 
-      test(
-          'throws GyverLampClientException and calls close '
+      test('throws GyverLampClientException and calls close '
           'when send is not successful', () async {
         when(
           () => socket.send(any(), any(), any()),
@@ -446,8 +443,7 @@ void main() {
         );
       });
 
-      test(
-          'throws GyverLampResponseParseException '
+      test('throws GyverLampResponseParseException '
           'when datagram is not present', () async {
         when(
           () => socket.receive(),
@@ -475,8 +471,7 @@ void main() {
         );
       });
 
-      test(
-          'throws GyverLampResponseParseException '
+      test('throws GyverLampResponseParseException '
           'when response format is wrong', () async {
         when(
           () => socket.receive(),
@@ -504,8 +499,7 @@ void main() {
         );
       });
 
-      test(
-          'throws GyverLampClientException '
+      test('throws GyverLampClientException '
           'when response is malformed', () async {
         when(
           () => socket.receive(),
@@ -543,8 +537,7 @@ void main() {
         );
       });
 
-      test(
-          'throws GyverLampClientException '
+      test('throws GyverLampClientException '
           'when client is closed during the datagram process', () async {
         eventsStreamController.onListen = () async {
           await subject.close();
@@ -572,8 +565,7 @@ void main() {
         );
       });
 
-      test(
-          'throws GyverLampClientException '
+      test('throws GyverLampClientException '
           'when no response from the lamp causes timeout', () async {
         await expectLater(
           () => subject.send(

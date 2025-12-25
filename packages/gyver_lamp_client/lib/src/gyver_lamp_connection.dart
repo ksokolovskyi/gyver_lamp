@@ -6,10 +6,11 @@ import 'dart:io';
 import 'package:gyver_lamp_client/src/src.dart';
 
 /// A factory to create and bind a [RawDatagramSocket] instance.
-typedef RawDatagramSocketFactory = FutureOr<RawDatagramSocket> Function(
-  String host,
-  int port,
-);
+typedef RawDatagramSocketFactory =
+    FutureOr<RawDatagramSocket> Function(
+      String host,
+      int port,
+    );
 
 /// {@template gyver_lamp_connection}
 /// Connection to the lamp to send and receive data.
@@ -19,8 +20,8 @@ class GyverLampConnection {
   GyverLampConnection({
     RawDatagramSocketFactory socketFactory = RawDatagramSocket.bind,
     Duration timeout = const Duration(seconds: 5),
-  })  : _socketFactory = socketFactory,
-        _timeout = timeout;
+  }) : _socketFactory = socketFactory,
+       _timeout = timeout;
 
   final RawDatagramSocketFactory _socketFactory;
   final Duration _timeout;

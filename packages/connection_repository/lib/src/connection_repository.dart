@@ -37,9 +37,9 @@ class ConnectionRepository {
   ConnectionRepository({
     required GyverLampClient client,
     Duration period = const Duration(seconds: 2),
-  })  : _client = client,
-        _period = period,
-        _controller = StreamController.broadcast();
+  }) : _client = client,
+       _period = period,
+       _controller = StreamController.broadcast();
 
   final GyverLampClient _client;
 
@@ -80,10 +80,7 @@ class ConnectionRepository {
 
       _controller.add(ConnectionStatus.connected);
 
-      _subscription = Stream<int>.periodic(
-        _period,
-        (_) => _,
-      ).listen(
+      _subscription = Stream<int>.periodic(_period, (i) => i).listen(
         (_) async {
           if (_subscription == null || _controller.isClosed) {
             return;

@@ -69,6 +69,7 @@ class Switcher extends StatefulWidget {
       ),
     );
   }
+
   // coverage:ignore-end
 }
 
@@ -404,13 +405,14 @@ class _SwitchPainter extends ToggleablePainter {
     if (reaction.isCompleted) {
       thumbSize = Size.fromRadius(pressedThumbRadius);
     } else {
-      thumbSize = Tween<Size>(
-        begin: inactiveThumbSize,
-        end: activeThumbSize,
-      )
-          .chain(CurveTween(curve: Curves.easeInOut))
-          .animate(positionController)
-          .value;
+      thumbSize =
+          Tween<Size>(
+                begin: inactiveThumbSize,
+                end: activeThumbSize,
+              )
+              .chain(CurveTween(curve: Curves.easeInOut))
+              .animate(positionController)
+              .value;
     }
 
     final positionValue = CurvedAnimation(
@@ -516,7 +518,8 @@ class _SwitchPainter extends ToggleablePainter {
     final additionalRectWidth = (thumbSize.width - thumbSize.height) / 2;
 
     final horizontalProgress = visualPosition * trackInnerLength;
-    final thumbHorizontalOffset = trackPaintOffset.dx -
+    final thumbHorizontalOffset =
+        trackPaintOffset.dx -
         additionalThumbRadius -
         additionalRectWidth +
         horizontalProgress;

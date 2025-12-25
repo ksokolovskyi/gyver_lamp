@@ -25,8 +25,8 @@ class ControlRepository {
   /// {@macro control_repository}
   ControlRepository({
     required GyverLampClient client,
-  })  : _client = client,
-        _controller = StreamController.broadcast();
+  }) : _client = client,
+       _controller = StreamController.broadcast();
 
   final GyverLampClient _client;
 

@@ -58,14 +58,14 @@ class InitialSetupView extends StatelessWidget {
 
     // Mark initial setup as completed, so on the next launch user will start
     // from the control page.
-    context
-        .read<SettingsController>()
-        .setInitialSetupCompleted(completed: true);
+    context.read<SettingsController>().setInitialSetupCompleted(
+      completed: true,
+    );
 
     // Resetting connection data if it is not valid.
     context.read<ConnectionBloc>().add(
-          const ConnectionDataCheckRequested(),
-        );
+      const ConnectionDataCheckRequested(),
+    );
 
     Navigator.of(context).pushReplacement<void, void>(
       ControlPage.route(),

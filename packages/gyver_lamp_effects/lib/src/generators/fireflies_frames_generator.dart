@@ -14,8 +14,8 @@ final class FirefliesFramesGenerator extends FramesGenerator {
   FirefliesFramesGenerator({
     required super.dimension,
     math.Random? random,
-  })  : _random = random ?? math.Random(),
-        super(blur: 3) {
+  }) : _random = random ?? math.Random(),
+       super(blur: 3) {
     _init();
   }
 

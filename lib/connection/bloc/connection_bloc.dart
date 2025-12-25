@@ -15,18 +15,18 @@ class ConnectionBloc extends Bloc<ConnectionEvent, ConnectionState> {
     required ConnectionRepository connectionRepository,
     required SettingsController settingsController,
     ConnectionData? initialConnectionData,
-  })  : _connectionRepository = connectionRepository,
-        _settingsController = settingsController,
-        super(
-          ConnectionInitial(
-            address: initialConnectionData != null
-                ? IpAddressInput.dirty(initialConnectionData.address)
-                : IpAddressInput.pure(),
-            port: initialConnectionData != null
-                ? PortInput.dirty(initialConnectionData.port)
-                : PortInput.pure(),
-          ),
-        ) {
+  }) : _connectionRepository = connectionRepository,
+       _settingsController = settingsController,
+       super(
+         ConnectionInitial(
+           address: initialConnectionData != null
+               ? IpAddressInput.dirty(initialConnectionData.address)
+               : IpAddressInput.pure(),
+           port: initialConnectionData != null
+               ? PortInput.dirty(initialConnectionData.port)
+               : PortInput.pure(),
+         ),
+       ) {
     on<IpAddressUpdated>(_onIpAddressUpdated);
     on<PortUpdated>(_onPortUpdated);
     on<ConnectionDataCheckRequested>(_onConnectionDataCheckRequested);

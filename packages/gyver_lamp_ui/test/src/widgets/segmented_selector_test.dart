@@ -472,9 +472,11 @@ void main() {
 
       final size = tester.getSize(find.byType(SegmentedSelector<int>));
 
-      final renderBox = tester.renderObject(
-        find.byType(SegmentedSelector<int>),
-      ) as RenderBox;
+      final renderBox =
+          tester.renderObject(
+                find.byType(SegmentedSelector<int>),
+              )
+              as RenderBox;
 
       expect(renderBox.getMinIntrinsicWidth(0), equals(size.width));
       expect(renderBox.getMaxIntrinsicWidth(0), equals(size.width));

@@ -121,21 +121,22 @@ class _GyverLampEffectState extends State<GyverLampEffect> {
                 child: child,
               );
             },
-            layoutBuilder: (
-              Widget? currentChild,
-              List<Widget> previousChildren,
-            ) {
-              return Stack(
-                alignment: Alignment.center,
-                children: <Widget>[
-                  ...previousChildren.map(
-                    (e) => Positioned.fill(child: e),
-                  ),
-                  if (currentChild != null)
-                    Positioned.fill(child: currentChild),
-                ],
-              );
-            },
+            layoutBuilder:
+                (
+                  Widget? currentChild,
+                  List<Widget> previousChildren,
+                ) {
+                  return Stack(
+                    alignment: Alignment.center,
+                    children: <Widget>[
+                      ...previousChildren.map(
+                        (e) => Positioned.fill(child: e),
+                      ),
+                      if (currentChild != null)
+                        Positioned.fill(child: currentChild),
+                    ],
+                  );
+                },
             child: Transform.scale(
               key: ValueKey(widget.type),
               scale: 1.1,

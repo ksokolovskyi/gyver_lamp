@@ -10,9 +10,9 @@ class ControlState extends Equatable {
     required this.scale,
     required this.isOn,
   }) : assert(
-          (isConnected && connectionData != null) || !isConnected,
-          'connectionData must not be null when isConnected',
-        );
+         (isConnected && connectionData != null) || !isConnected,
+         'connectionData must not be null when isConnected',
+       );
 
   final bool isConnected;
 
@@ -65,12 +65,12 @@ class ControlState extends Equatable {
 
   @override
   List<Object?> get props => [
-        isConnected,
-        connectionData,
-        mode,
-        brightness,
-        speed,
-        scale,
-        isOn,
-      ];
+    isConnected,
+    connectionData,
+    mode,
+    brightness,
+    speed,
+    scale,
+    isOn,
+  ];
 }

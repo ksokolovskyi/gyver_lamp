@@ -9,27 +9,27 @@ class LavaFramesGenerator extends NoiseFramesGenerator {
   LavaFramesGenerator({
     required super.dimension,
   }) : super(
-          blur: 20,
-          palette: const [
-            FastLedColors.black,
-            FastLedColors.maroon,
-            FastLedColors.black,
-            FastLedColors.maroon,
-            //
-            FastLedColors.darkRed,
-            FastLedColors.darkRed,
-            FastLedColors.maroon,
-            FastLedColors.darkRed,
-            //
-            FastLedColors.darkRed,
-            FastLedColors.darkRed,
-            FastLedColors.red,
-            FastLedColors.orange,
-            //
-            FastLedColors.white,
-            FastLedColors.orange,
-            FastLedColors.red,
-            FastLedColors.darkRed,
-          ],
-        );
+         blur: 20,
+         palette: const [
+           FastLedColors.black,
+           FastLedColors.maroon,
+           FastLedColors.black,
+           FastLedColors.maroon,
+           //
+           FastLedColors.darkRed,
+           FastLedColors.darkRed,
+           FastLedColors.maroon,
+           FastLedColors.darkRed,
+           //
+           FastLedColors.darkRed,
+           FastLedColors.darkRed,
+           FastLedColors.red,
+           FastLedColors.orange,
+           //
+           FastLedColors.white,
+           FastLedColors.orange,
+           FastLedColors.red,
+           FastLedColors.darkRed,
+         ],
+       );
 }

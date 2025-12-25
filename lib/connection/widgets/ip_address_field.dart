@@ -47,8 +47,8 @@ class _IpAddressFieldState extends State<IpAddressField> {
           enabled: !state.isConnecting,
           onChanged: (address) {
             context.read<ConnectionBloc>().add(
-                  IpAddressUpdated(address: address),
-                );
+              IpAddressUpdated(address: address),
+            );
           },
         );
       },

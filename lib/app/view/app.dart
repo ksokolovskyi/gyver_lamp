@@ -47,8 +47,8 @@ class _AppState extends State<App> {
               settingsController: widget.data.settingsController,
               initialConnectionData: widget.data.initialConnectionData,
             )..add(
-                const ConnectionRequested(),
-              );
+              const ConnectionRequested(),
+            );
           },
         ),
       ],
@@ -88,8 +88,8 @@ class _AppState extends State<App> {
                   systemNavigationBarColor: colors.background,
                   systemNavigationBarIconBrightness:
                       brightness == Brightness.dark
-                          ? Brightness.light
-                          : Brightness.dark,
+                      ? Brightness.light
+                      : Brightness.dark,
                 ),
                 child: AlertMessenger(child: child!),
               );

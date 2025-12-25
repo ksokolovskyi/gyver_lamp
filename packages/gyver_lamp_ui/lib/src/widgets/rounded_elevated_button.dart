@@ -62,10 +62,10 @@ class RoundedElevatedButton extends StatefulWidget {
 
   /// The height of the button.
   double get height => switch (size) {
-        (RoundedElevatedButtonSize.small) => 32,
-        (RoundedElevatedButtonSize.medium) => 40,
-        (RoundedElevatedButtonSize.large) => 48,
-      };
+    (RoundedElevatedButtonSize.small) => 32,
+    (RoundedElevatedButtonSize.medium) => 40,
+    (RoundedElevatedButtonSize.large) => 48,
+  };
 
   @override
   State<RoundedElevatedButton> createState() => RoundedElevatedButtonState();
@@ -124,19 +124,19 @@ class RoundedElevatedButtonState extends State<RoundedElevatedButton> {
                 horizontal: GyverLampSpacings.lg,
               ),
               child: DefaultTextStyle(
-                style: switch (widget.size) {
-                  (RoundedElevatedButtonSize.small) =>
-                    GyverLampTextStyles.buttonSmallBold,
-                  (RoundedElevatedButtonSize.medium) =>
-                    GyverLampTextStyles.buttonMediumBold,
-                  (RoundedElevatedButtonSize.large) =>
-                    GyverLampTextStyles.buttonLargeBold,
-                }
-                    .copyWith(
-                  color: widget.onPressed != null
-                      ? theme.background
-                      : theme.textButtonDisabled,
-                ),
+                style:
+                    switch (widget.size) {
+                      (RoundedElevatedButtonSize.small) =>
+                        GyverLampTextStyles.buttonSmallBold,
+                      (RoundedElevatedButtonSize.medium) =>
+                        GyverLampTextStyles.buttonMediumBold,
+                      (RoundedElevatedButtonSize.large) =>
+                        GyverLampTextStyles.buttonLargeBold,
+                    }.copyWith(
+                      color: widget.onPressed != null
+                          ? theme.background
+                          : theme.textButtonDisabled,
+                    ),
                 overflow: TextOverflow.ellipsis,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,

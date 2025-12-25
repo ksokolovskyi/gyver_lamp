@@ -54,8 +54,8 @@ class ConnectDialog extends StatelessWidget {
 
     // Resetting connection data if it is not valid.
     context.read<ConnectionBloc>().add(
-          const ConnectionDataCheckRequested(),
-        );
+      const ConnectionDataCheckRequested(),
+    );
 
     Navigator.of(context).maybePop();
   }

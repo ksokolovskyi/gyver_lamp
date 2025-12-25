@@ -12,8 +12,8 @@ final class SnowFramesGenerator extends FramesGenerator {
   SnowFramesGenerator({
     required super.dimension,
     math.Random? random,
-  })  : _random = random ?? math.Random(),
-        super(blur: 3);
+  }) : _random = random ?? math.Random(),
+       super(blur: 3);
 
   final math.Random _random;
 

@@ -98,8 +98,11 @@ void main() {
 
       expect(
         tester.widget(find.byType(FlatIconButton)),
-        isA<FlatIconButton>()
-            .having((i) => i.dimension, 'dimension', equals(32)),
+        isA<FlatIconButton>().having(
+          (i) => i.dimension,
+          'dimension',
+          equals(32),
+        ),
       );
 
       expect(
@@ -119,8 +122,11 @@ void main() {
 
       expect(
         tester.widget(find.byType(FlatIconButton)),
-        isA<FlatIconButton>()
-            .having((i) => i.dimension, 'dimension', equals(44)),
+        isA<FlatIconButton>().having(
+          (i) => i.dimension,
+          'dimension',
+          equals(44),
+        ),
       );
 
       expect(

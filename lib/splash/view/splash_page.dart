@@ -67,8 +67,9 @@ class SplashPageState extends State<SplashPage>
     _controller
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
-          (stateController.findInput<bool>('connected')! as SMIBool)
-              .change(false);
+          (stateController.findInput<bool>('connected')! as SMIBool).change(
+            false,
+          );
         }
       })
       ..forward();

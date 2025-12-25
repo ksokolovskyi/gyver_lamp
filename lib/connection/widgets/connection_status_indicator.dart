@@ -16,8 +16,7 @@ class ConnectionStatusIndicator extends StatelessWidget {
 
         final status = switch (state) {
           ConnectionInitial() ||
-          ConnectionFailure() =>
-            ConnectionStatus.notConnected,
+          ConnectionFailure() => ConnectionStatus.notConnected,
           ConnectionInProgress() => ConnectionStatus.connecting,
           ConnectionSuccess() => ConnectionStatus.connected,
         };
@@ -33,28 +32,28 @@ class ConnectionStatusIndicator extends StatelessWidget {
           },
           onPressed: switch (status) {
             ConnectionStatus.notConnected => () {
-                final bloc = context.read<ConnectionBloc>();
+              final bloc = context.read<ConnectionBloc>();
 
-                GyverLampDialog.show(
-                  context,
-                  dialog: BlocProvider<ConnectionBloc>.value(
-                    value: bloc,
-                    child: const ConnectDialog(),
-                  ),
-                );
-              },
+              GyverLampDialog.show(
+                context,
+                dialog: BlocProvider<ConnectionBloc>.value(
+                  value: bloc,
+                  child: const ConnectDialog(),
+                ),
+              );
+            },
             ConnectionStatus.connecting => null,
             ConnectionStatus.connected => () {
-                final bloc = context.read<ConnectionBloc>();
+              final bloc = context.read<ConnectionBloc>();
 
-                GyverLampDialog.show(
-                  context,
-                  dialog: BlocProvider<ConnectionBloc>.value(
-                    value: bloc,
-                    child: const DisconnectDialog(),
-                  ),
-                );
-              },
+              GyverLampDialog.show(
+                context,
+                dialog: BlocProvider<ConnectionBloc>.value(
+                  value: bloc,
+                  child: const DisconnectDialog(),
+                ),
+              );
+            },
           },
         );
       },

@@ -20,10 +20,11 @@ class GyverLampClientException implements Exception {
 }
 
 /// A factory to create a [GyverLampConnection] instance.
-typedef GyverLampConnectionFactory = GyverLampConnection Function({
-  RawDatagramSocketFactory socketFactory,
-  Duration timeout,
-});
+typedef GyverLampConnectionFactory =
+    GyverLampConnection Function({
+      RawDatagramSocketFactory socketFactory,
+      Duration timeout,
+    });
 
 /// A typedef for logging callback.
 typedef LoggerCallback = void Function(String address, int port, Object data);
@@ -41,14 +42,14 @@ class GyverLampClient {
     LoggerCallback? onSend,
     LoggerCallback? onResponse,
     LoggerCallback? onError,
-  })  : _connection = connectionFactory(
-          socketFactory: socketFactory,
-          timeout: timeout,
-        ),
-        _onSend = onSend,
-        _onResponse = onResponse,
-        _onError = onError,
-        _controller = StreamController.broadcast();
+  }) : _connection = connectionFactory(
+         socketFactory: socketFactory,
+         timeout: timeout,
+       ),
+       _onSend = onSend,
+       _onResponse = onResponse,
+       _onError = onError,
+       _controller = StreamController.broadcast();
 
   final GyverLampConnection _connection;
 

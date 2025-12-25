@@ -13,9 +13,10 @@ const _kBadgeRadius = Radius.circular(30);
 
 /// Signature for the function that returns a string representation of the
 /// specific connection status.
-typedef ConnectionStatusLabelResolver = String Function(
-  ConnectionStatus states,
-);
+typedef ConnectionStatusLabelResolver =
+    String Function(
+      ConnectionStatus states,
+    );
 
 /// Represents the connection status.
 enum ConnectionStatus {
@@ -157,34 +158,35 @@ class ConnectionStatusBadgeState extends State<ConnectionStatusBadge> {
                             ),
                           );
                         },
-                        layoutBuilder: (
-                          Widget? currentChild,
-                          List<Widget> previousChildren,
-                        ) {
-                          final Widget? previousChild;
+                        layoutBuilder:
+                            (
+                              Widget? currentChild,
+                              List<Widget> previousChildren,
+                            ) {
+                              final Widget? previousChild;
 
-                          if (previousChildren.isEmpty) {
-                            previousChild = null;
-                          } else {
-                            previousChild = previousChildren.first;
-                          }
+                              if (previousChildren.isEmpty) {
+                                previousChild = null;
+                              } else {
+                                previousChild = previousChildren.first;
+                              }
 
-                          return Stack(
-                            clipBehavior: Clip.antiAlias,
-                            alignment: Alignment.centerLeft,
-                            children: <Widget>[
-                              if (previousChild != null)
-                                Positioned.fill(
-                                  child: OverflowBox(
-                                    alignment: Alignment.centerLeft,
-                                    maxWidth: double.infinity,
-                                    child: previousChild,
-                                  ),
-                                ),
-                              if (currentChild != null) currentChild,
-                            ],
-                          );
-                        },
+                              return Stack(
+                                clipBehavior: Clip.antiAlias,
+                                alignment: Alignment.centerLeft,
+                                children: <Widget>[
+                                  if (previousChild != null)
+                                    Positioned.fill(
+                                      child: OverflowBox(
+                                        alignment: Alignment.centerLeft,
+                                        maxWidth: double.infinity,
+                                        child: previousChild,
+                                      ),
+                                    ),
+                                  if (currentChild != null) currentChild,
+                                ],
+                              );
+                            },
                         child: Text(
                           widget.label(widget.status),
                           key: ValueKey(widget.status),

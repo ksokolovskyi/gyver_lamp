@@ -269,9 +269,9 @@ class _Alert extends StatelessWidget {
   final VoidCallback onClose;
 
   Duration get duration => switch (type) {
-        _AlertType.error => kErrorAlertDuration,
-        _AlertType.info => kInfoAlertDuration,
-      };
+    _AlertType.error => kErrorAlertDuration,
+    _AlertType.info => kInfoAlertDuration,
+  };
 
   @override
   Widget build(BuildContext context) {

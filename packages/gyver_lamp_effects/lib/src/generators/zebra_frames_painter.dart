@@ -9,28 +9,28 @@ class ZebraFramesGenerator extends NoiseFramesGenerator {
   ZebraFramesGenerator({
     required super.dimension,
   }) : super(
-          blur: 20,
-          looped: true,
-          palette: const [
-            FastLedColors.white,
-            FastLedColors.black,
-            FastLedColors.black,
-            FastLedColors.black,
-            //
-            FastLedColors.white,
-            FastLedColors.black,
-            FastLedColors.black,
-            FastLedColors.black,
-            //
-            FastLedColors.white,
-            FastLedColors.black,
-            FastLedColors.black,
-            FastLedColors.black,
-            //
-            FastLedColors.white,
-            FastLedColors.black,
-            FastLedColors.black,
-            FastLedColors.black,
-          ],
-        );
+         blur: 20,
+         looped: true,
+         palette: const [
+           FastLedColors.white,
+           FastLedColors.black,
+           FastLedColors.black,
+           FastLedColors.black,
+           //
+           FastLedColors.white,
+           FastLedColors.black,
+           FastLedColors.black,
+           FastLedColors.black,
+           //
+           FastLedColors.white,
+           FastLedColors.black,
+           FastLedColors.black,
+           FastLedColors.black,
+           //
+           FastLedColors.white,
+           FastLedColors.black,
+           FastLedColors.black,
+           FastLedColors.black,
+         ],
+       );
 }

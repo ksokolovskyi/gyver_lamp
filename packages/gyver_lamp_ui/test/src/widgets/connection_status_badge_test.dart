@@ -4,10 +4,10 @@ import 'package:gyver_lamp_ui/gyver_lamp_ui.dart';
 
 void main() {
   String label(ConnectionStatus status) => switch (status) {
-        (ConnectionStatus.connected) => 'Connected',
-        (ConnectionStatus.connecting) => 'Connecting',
-        (ConnectionStatus.notConnected) => 'Not Connected',
-      };
+    (ConnectionStatus.connected) => 'Connected',
+    (ConnectionStatus.connecting) => 'Connecting',
+    (ConnectionStatus.notConnected) => 'Not Connected',
+  };
 
   group('ConnectionStatusBadge', () {
     testWidgets('renders correctly for connected status', (tester) async {

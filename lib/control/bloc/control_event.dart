@@ -12,9 +12,9 @@ class ConnectionStateUpdated extends ControlEvent {
     required this.isConnected,
     required this.connectionData,
   }) : assert(
-          (isConnected && connectionData != null) || !isConnected,
-          'connectionData must not be null when isConnected',
-        );
+         (isConnected && connectionData != null) || !isConnected,
+         'connectionData must not be null when isConnected',
+       );
 
   final bool isConnected;
 

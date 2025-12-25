@@ -10,14 +10,14 @@ abstract class GyverLampTextStyles {
 
   /// Creates a [TextTheme] from the text styles.
   static TextTheme get textTheme => const TextTheme(
-        labelLarge: buttonLarge,
-        titleMedium: subtitle1,
-        titleSmall: subtitle2,
-        labelSmall: overline,
-        bodyLarge: body1,
-        bodyMedium: body2,
-        bodySmall: caption,
-      );
+    labelLarge: buttonLarge,
+    titleMedium: subtitle1,
+    titleSmall: subtitle2,
+    labelSmall: overline,
+    bodyLarge: body1,
+    bodyMedium: body2,
+    bodySmall: caption,
+  );
 
   /// headline4
   static const TextStyle headline4 = TextStyle(

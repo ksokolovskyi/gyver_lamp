@@ -13,18 +13,18 @@ class ControlBloc extends Bloc<ControlEvent, ControlState> {
     required ControlRepository controlRepository,
     required bool isConnected,
     required ConnectionData? connectionData,
-  })  : _controlRepository = controlRepository,
-        super(
-          ControlState(
-            isConnected: isConnected,
-            connectionData: connectionData,
-            mode: GyverLampMode.fromIndex(0),
-            brightness: 128,
-            speed: 30,
-            scale: 10,
-            isOn: false,
-          ),
-        ) {
+  }) : _controlRepository = controlRepository,
+       super(
+         ControlState(
+           isConnected: isConnected,
+           connectionData: connectionData,
+           mode: GyverLampMode.fromIndex(0),
+           brightness: 128,
+           speed: 30,
+           scale: 10,
+           isOn: false,
+         ),
+       ) {
     on<ControlRequested>(_onControlRequested);
     on<ConnectionStateUpdated>(_onConnectionStateUpdated);
     on<LampMessageReceived>(_onLampMessageReceived);

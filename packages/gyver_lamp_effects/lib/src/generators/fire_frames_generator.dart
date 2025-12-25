@@ -16,12 +16,12 @@ final class FireFramesGenerator extends FramesGenerator {
   FireFramesGenerator({
     required super.dimension,
     math.Random? random,
-  })  : assert(
-          dimension >= 16,
-          'dimension must be >= 16',
-        ),
-        _random = random ?? math.Random(),
-        super(blur: 5) {
+  }) : assert(
+         dimension >= 16,
+         'dimension must be >= 16',
+       ),
+       _random = random ?? math.Random(),
+       super(blur: 5) {
     _init();
   }
 

@@ -35,8 +35,8 @@ class ControlAppBar extends StatelessWidget implements PreferredSizeWidget {
               value: state.isOn,
               onChanged: (isOn) {
                 context.read<ControlBloc>().add(
-                      PowerToggled(isOn: isOn),
-                    );
+                  PowerToggled(isOn: isOn),
+                );
               },
             );
           },

@@ -162,9 +162,9 @@ class SegmentedSelector<T extends Object> extends StatefulWidget {
     required this.onChanged,
     super.key,
   }) : assert(
-          segments.length >= 2,
-          'Not enough segments. Please provide at least 2 segments.',
-        );
+         segments.length >= 2,
+         'Not enough segments. Please provide at least 2 segments.',
+       );
 
   /// Descriptions of the segments in the selector.
   final List<SelectorSegment<T>> segments;
@@ -180,7 +180,8 @@ class SegmentedSelector<T extends Object> extends StatefulWidget {
 }
 
 class _SegmentedSelectorState<T extends Object>
-    extends State<SegmentedSelector<T>> with TickerProviderStateMixin {
+    extends State<SegmentedSelector<T>>
+    with TickerProviderStateMixin {
   late final _thumbController = AnimationController(
     duration: _kSpringAnimationDuration,
     value: 0,
@@ -284,8 +285,10 @@ class _SegmentedSelectorState<T extends Object>
     final renderBox = context.findRenderObject()! as RenderBox;
     final numOfChildren = widget.segments.length;
 
-    var index = (dx ~/ (renderBox.size.width / numOfChildren))
-        .clamp(0, numOfChildren - 1);
+    var index = (dx ~/ (renderBox.size.width / numOfChildren)).clamp(
+      0,
+      numOfChildren - 1,
+    );
 
     switch (Directionality.of(context)) {
       case TextDirection.ltr:
@@ -303,9 +306,10 @@ class _SegmentedSelectorState<T extends Object>
     final size = renderBox.size;
     final offCenter =
         details.localPosition - Offset(size.width / 2, size.height / 2);
-    final l2 = math.pow(math.max(0.0, offCenter.dx.abs() - size.width / 2), 2) +
-            math.pow(math.max(0.0, offCenter.dy.abs() - size.height / 2), 2)
-        as double;
+    final l2 =
+        math.pow(math.max(0.0, offCenter.dx.abs() - size.width / 2), 2) +
+                math.pow(math.max(0.0, offCenter.dy.abs() - size.height / 2), 2)
+            as double;
 
     return l2 > _kTouchYDistanceThreshold;
   }
@@ -539,18 +543,22 @@ class _SegmentedSelectorParentData extends ContainerBoxParentData<RenderBox> {}
 
 class _RenderSegmentedSelector<T extends Object> extends RenderBox
     with
-        ContainerRenderObjectMixin<RenderBox,
-            ContainerBoxParentData<RenderBox>>,
-        RenderBoxContainerDefaultsMixin<RenderBox,
-            ContainerBoxParentData<RenderBox>> {
+        ContainerRenderObjectMixin<
+          RenderBox,
+          ContainerBoxParentData<RenderBox>
+        >,
+        RenderBoxContainerDefaultsMixin<
+          RenderBox,
+          ContainerBoxParentData<RenderBox>
+        > {
   _RenderSegmentedSelector({
     required int highlightedIndex,
     required Color thumbColor,
     required double thumbScale,
     required this.state,
-  })  : _highlightedIndex = highlightedIndex,
-        _thumbColor = thumbColor,
-        _thumbScale = thumbScale;
+  }) : _highlightedIndex = highlightedIndex,
+       _thumbColor = thumbColor,
+       _thumbScale = thumbScale;
 
   final _SegmentedSelectorState<T> state;
 
@@ -696,7 +704,7 @@ class _RenderSegmentedSelector<T extends Object> extends RenderBox
 
     var childWidth =
         (constraints.minWidth - totalSeparatorWidth * separatorsCount) /
-            childCount;
+        childCount;
     var maxHeight = 0.0;
 
     var child = firstChild;
@@ -797,7 +805,7 @@ class _RenderSegmentedSelector<T extends Object> extends RenderBox
     final leftMost = firstChildOffset.dx;
     final rightMost =
         (children.last.parentData! as _SegmentedSelectorParentData).offset.dx +
-            children.last.size.width;
+        children.last.size.width;
 
     // Ignore the horizontal position and the height of `thumbRect`, and
     // calculate them from `children`.
@@ -835,7 +843,8 @@ class _RenderSegmentedSelector<T extends Object> extends RenderBox
 
       if (thumbTween == null) {
         // This is the first frame of the animation.
-        final startingRect = moveThumbRectInBound(
+        final startingRect =
+            moveThumbRectInBound(
               currentThumbRect,
               children,
             ) ??
@@ -852,7 +861,7 @@ class _RenderSegmentedSelector<T extends Object> extends RenderBox
 
     final unscaledThumbRect =
         state._thumbAnimatable?.evaluate(state._thumbController) ??
-            newThumbRect;
+        newThumbRect;
 
     currentThumbRect = unscaledThumbRect;
 

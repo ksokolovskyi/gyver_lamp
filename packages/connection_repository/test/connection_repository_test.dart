@@ -73,8 +73,7 @@ void main() {
         },
       );
 
-      test(
-          'emits ConnectionStatus.connecting and ConnectionStatus.connected '
+      test('emits ConnectionStatus.connecting and ConnectionStatus.connected '
           'when ping returns response', () {
         fakeAsync((async) {
           final emittedStatuses = <ConnectionStatus>[];
@@ -108,8 +107,7 @@ void main() {
         });
       });
 
-      test(
-          'emits ConnectionStatus.connecting, ConnectionStatus.disconnected '
+      test('emits ConnectionStatus.connecting, ConnectionStatus.disconnected '
           'and throws ConnectionException when ping throws', () {
         when(
           () => client.ping(
@@ -136,10 +134,10 @@ void main() {
               )
               .then((_) {})
               .onError(
-            (e, t) {
-              exception = e;
-            },
-          );
+                (e, t) {
+                  exception = e;
+                },
+              );
 
           async.elapse(period);
 
@@ -215,63 +213,65 @@ void main() {
         ).called(count + 1);
       });
 
-      test('stops constantly pings after an exception in ping and disconnects',
-          () {
-        var shouldThrow = false;
+      test(
+        'stops constantly pings after an exception in ping and disconnects',
+        () {
+          var shouldThrow = false;
 
-        when(
-          () => client.ping(
-            address: any(named: 'address'),
-            port: any(named: 'port'),
-          ),
-        ).thenAnswer((_) async {
-          if (!shouldThrow) {
-            shouldThrow = true;
-            return expectedResponse;
-          }
-
-          throw ArgumentError('TEST');
-        });
-
-        fakeAsync((async) {
-          final emittedStatuses = <ConnectionStatus>[];
-
-          final subscription = subject.statuses.listen(
-            emittedStatuses.add,
-          );
-
-          subject
-              .connect(
-                address: address,
-                port: port,
-              )
-              .then((_) {});
-
-          async.elapse(period);
-
-          expect(
-            emittedStatuses,
-            equals(
-              [
-                ConnectionStatus.connecting,
-                ConnectionStatus.connected,
-                ConnectionStatus.disconnected,
-              ],
+          when(
+            () => client.ping(
+              address: any(named: 'address'),
+              port: any(named: 'port'),
             ),
-          );
+          ).thenAnswer((_) async {
+            if (!shouldThrow) {
+              shouldThrow = true;
+              return expectedResponse;
+            }
 
-          subscription.cancel();
+            throw ArgumentError('TEST');
+          });
 
-          async.elapse(Duration.zero);
-        });
+          fakeAsync((async) {
+            final emittedStatuses = <ConnectionStatus>[];
 
-        verify(
-          () => client.ping(
-            address: address,
-            port: port,
-          ),
-        ).called(2);
-      });
+            final subscription = subject.statuses.listen(
+              emittedStatuses.add,
+            );
+
+            subject
+                .connect(
+                  address: address,
+                  port: port,
+                )
+                .then((_) {});
+
+            async.elapse(period);
+
+            expect(
+              emittedStatuses,
+              equals(
+                [
+                  ConnectionStatus.connecting,
+                  ConnectionStatus.connected,
+                  ConnectionStatus.disconnected,
+                ],
+              ),
+            );
+
+            subscription.cancel();
+
+            async.elapse(Duration.zero);
+          });
+
+          verify(
+            () => client.ping(
+              address: address,
+              port: port,
+            ),
+          ).called(2);
+        },
+      );
     });
 
     group('disconnect', () {

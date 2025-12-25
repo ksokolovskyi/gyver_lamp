@@ -330,8 +330,7 @@ void main() {
         );
       });
 
-      test(
-          'throws AssertionError '
+      test('throws AssertionError '
           'when brightness is greater than 255', () async {
         await expectLater(
           () => subject.setBrightness(
@@ -420,8 +419,7 @@ void main() {
         );
       });
 
-      test(
-          'throws AssertionError '
+      test('throws AssertionError '
           'when speed is greater than 255', () async {
         await expectLater(
           () => subject.setSpeed(
@@ -510,8 +508,7 @@ void main() {
         );
       });
 
-      test(
-          'throws AssertionError '
+      test('throws AssertionError '
           'when scale is greater than 255', () async {
         await expectLater(
           () => subject.setScale(

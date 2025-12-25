@@ -46,9 +46,9 @@ class SettingsController {
     await Future.wait([
       _persistence.getLocale().then((value) => _locale.value = value),
       _persistence.getDarkModeOn().then((value) => _darkModeOn.value = value),
-      _persistence
-          .getInitialSetupCompleted()
-          .then((value) => _initialSetupCompleted.value = value),
+      _persistence.getInitialSetupCompleted().then(
+        (value) => _initialSetupCompleted.value = value,
+      ),
       _persistence.getIpAddress().then((value) => _ipAddress.value = value),
       _persistence.getPort().then((value) => _port.value = value),
     ]);
