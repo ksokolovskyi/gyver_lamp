@@ -6,15 +6,21 @@ concurrency:
 
 on:
   pull_request:
-    paths:
-      - "packages/gyver_lamp_client/**"
-      - ".github/workflows/gyver_lamp_client.yaml"
     branches:
       - main
+    paths:
+      - ".github/workflows/gyver_lamp_client.yaml"
+      - "packages/gyver_lamp_client/**"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/**"
+      - "packages/gyver_lamp_client/**"
 
 jobs:
   build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
     with:
-      dart_sdk: stable
+      flutter_channel: stable
       working_directory: packages/gyver_lamp_client

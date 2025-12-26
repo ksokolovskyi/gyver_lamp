@@ -6,11 +6,17 @@ concurrency:
 
 on:
   pull_request:
-    paths:
-      - "packages/settings_controller/**"
-      - ".github/workflows/settings_controller.yaml"
     branches:
       - main
+    paths:
+      - ".github/workflows/settings_controller.yaml"
+      - "packages/settings_controller/**"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/**"
+      - "packages/settings_controller/**"
 
 jobs:
   build:

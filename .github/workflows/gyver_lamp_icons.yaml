@@ -6,11 +6,17 @@ concurrency:
 
 on:
   pull_request:
-    paths:
-      - "packages/gyver_lamp_icons/**"
-      - ".github/workflows/gyver_lamp_icons.yaml"
     branches:
       - main
+    paths:
+      - ".github/workflows/gyver_lamp_icons.yaml"
+      - "packages/gyver_lamp_icons/**"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/**"
+      - "packages/gyver_lamp_icons/**"
 
 jobs:
   build:
