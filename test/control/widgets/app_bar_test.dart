@@ -77,6 +77,7 @@ void main() {
       when(
         () => navigator.push<void>(any()),
       ).thenAnswer((_) async {});
+      when(navigator.canPop).thenReturn(true);
 
       await tester.pumpSubject(
         MockNavigatorProvider(

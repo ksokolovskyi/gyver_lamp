@@ -25,7 +25,10 @@ void main() {
 
     setUp(() {
       bloc = _MockConnectionBloc();
+
       navigator = MockNavigator();
+      when(navigator.canPop).thenReturn(true);
+
       messenger = MockAlertMessenger();
     });
 

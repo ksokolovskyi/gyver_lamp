@@ -38,7 +38,9 @@ void main() {
         findsOneWidget,
       );
       expect(
-        find.byType(ColoredBox),
+        find.byWidgetPredicate(
+          (widget) => widget is ColoredBox && widget.color == Colors.red,
+        ),
         findsNothing,
       );
 
@@ -59,7 +61,9 @@ void main() {
         findsNothing,
       );
       expect(
-        find.byType(ColoredBox),
+        find.byWidgetPredicate(
+          (widget) => widget is ColoredBox && widget.color == Colors.red,
+        ),
         findsOneWidget,
       );
     });

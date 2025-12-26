@@ -26,6 +26,7 @@ void main() {
       when(() => settingsController.darkModeOn).thenReturn(darkModeOn);
 
       navigator = MockNavigator();
+      when(navigator.canPop).thenReturn(true);
     });
 
     tearDown(() {

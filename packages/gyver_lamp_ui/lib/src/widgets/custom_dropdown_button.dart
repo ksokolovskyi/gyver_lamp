@@ -166,7 +166,9 @@ class _CustomDropdownButtonState<T extends Object>
 
     navigator.push(_dropdownRoute!).then<void>(
       (T? result) {
-        _isOpen.value = false;
+        if (mounted) {
+          _isOpen.value = false;
+        }
 
         _removeDropdownRoute();
 

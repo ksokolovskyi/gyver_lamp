@@ -116,6 +116,7 @@ void main() {
         wasPopped = true;
         return true;
       });
+      when(navigator.canPop).thenReturn(true);
 
       await tester.pumpSubject(
         MockNavigatorProvider(
@@ -176,6 +177,7 @@ void main() {
           wasPopped = true;
           return true;
         });
+        when(navigator.canPop).thenReturn(true);
 
         await tester.pumpSubject(
           MockNavigatorProvider(

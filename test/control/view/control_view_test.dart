@@ -54,6 +54,8 @@ void main() {
       );
 
       navigator = MockNavigator();
+      when(navigator.canPop).thenReturn(true);
+
       messenger = MockAlertMessenger();
     });
 
