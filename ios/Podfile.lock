@@ -25,11 +25,11 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/url_launcher_ios/ios"
 
 SPEC CHECKSUMS:
-  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  rive_common: 8a159d68033a8b073e5853acc50f03aa486a2888
-  shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
-  url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  rive_common: 174a033b260147a98ca082e0c76a6eacc800c4cc
+  shared_preferences_foundation: 7036424c3d8ec98dfe75ff1667cb0cd531ec82bb
+  url_launcher_ios: 7a95fa5b60cc718a708b8f2966718e93db0cef1b
 
-PODFILE CHECKSUM: 216a07bd17c29f43047bcc707524116833a4fb33
+PODFILE CHECKSUM: 062526a96b6bd90cd674ed269bdd8d0c3cd5c2f4
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.16.2
