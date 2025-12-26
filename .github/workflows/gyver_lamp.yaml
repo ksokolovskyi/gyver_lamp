@@ -7,3 +7,5 @@ jobs:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
     with:
       flutter_channel: stable
+      working_directory: .
+      coverage_excludes: 'packages/**/*.dart lib/l10n/arb/*.dart'
