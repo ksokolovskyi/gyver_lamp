@@ -159,7 +159,7 @@ enum _CustomAppBarSlot {
 /// right side of the screen respectively.
 class _CustomAppBarLayout extends MultiChildLayoutDelegate {
   /// The default spacing around the middle widget.
-  static const kTitleSpacing = GyverLampSpacings.sm;
+  static const double kTitleSpacing = GyverLampSpacings.sm;
 
   @override
   void performLayout(Size size) {

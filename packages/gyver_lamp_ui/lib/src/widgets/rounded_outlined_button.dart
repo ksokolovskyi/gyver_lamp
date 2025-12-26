@@ -131,7 +131,7 @@ class RoundedOutlinedButtonState extends State<RoundedOutlinedButton> {
                       }.copyWith(
                         color: widget.onPressed != null
                             ? theme.textSecondary
-                            : theme.textSecondary.withOpacity(0.5),
+                            : theme.textSecondary.withValues(alpha: 0.5),
                       ),
                   overflow: TextOverflow.ellipsis,
                   child: Row(

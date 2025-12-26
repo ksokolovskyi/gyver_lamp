@@ -186,7 +186,7 @@ extension _DarkModeSwitcher on WidgetTester {
           locale: locale,
           supportedLocales: {
             ...AppLocalizations.supportedLocales,
-            if (locale != null) locale,
+            ?locale,
           }.toList(),
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           theme: GyverLampTheme.lightThemeData,

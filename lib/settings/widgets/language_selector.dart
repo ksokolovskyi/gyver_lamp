@@ -12,7 +12,8 @@ class LanguageSelector extends StatefulWidget {
 }
 
 class _LanguageSelectorState extends State<LanguageSelector> {
-  static final _segments = AppLocalizations.supportedLocales
+  static final List<SelectorSegment<Locale>> _segments = AppLocalizations
+      .supportedLocales
       .map(
         (l) => SelectorSegment(
           value: l,

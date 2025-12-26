@@ -53,7 +53,7 @@ final class MatrixFramesGenerator extends FramesGenerator {
 
     // Fill the top row.
     for (var x = 0; x < dimension; x++) {
-      final color = data[x].value;
+      final color = data[x].toARGB32();
 
       if (color == 0xFF000000) {
         data[x] = _random.nextInt(scale) == 0

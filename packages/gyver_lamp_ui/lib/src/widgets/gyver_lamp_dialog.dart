@@ -32,7 +32,7 @@ class GyverLampDialog extends StatelessWidget {
   }) async {
     return showGeneralDialog<void>(
       context: context,
-      pageBuilder: (context, _, __) => dialog,
+      pageBuilder: (context, _, _) => dialog,
       transitionDuration: const Duration(milliseconds: 250),
       transitionBuilder: (context, animation, secondaryAnimation, child) {
         final curvedAnimation = Curves.easeOutBack.transform(animation.value);

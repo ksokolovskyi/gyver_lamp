@@ -86,7 +86,7 @@ class FlatIconButton extends StatelessWidget {
                     (FlatIconButtonSize.large) => 16,
                   },
                   color: onPressed == null
-                      ? theme.textSecondary.withOpacity(0.5)
+                      ? theme.textSecondary.withValues(alpha: 0.5)
                       : theme.textSecondary,
                 ),
               ),

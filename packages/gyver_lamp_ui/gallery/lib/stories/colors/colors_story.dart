@@ -253,7 +253,7 @@ class _ColorCard extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             SelectableText(
-              '0x${color.value.toRadixString(16).toUpperCase()}',
+              '0x${color.toARGB32().toRadixString(16).toUpperCase()}',
               textAlign: TextAlign.center,
               style: GalleryTextStyles.bodyMedium,
             ),

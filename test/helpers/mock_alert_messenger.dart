@@ -1,3 +1,5 @@
+// ignore_for_file: document_ignores
+
 import 'package:flutter/material.dart';
 import 'package:gyver_lamp_ui/gyver_lamp_ui.dart';
 import 'package:mockingjay/mockingjay.dart';

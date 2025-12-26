@@ -123,7 +123,11 @@ void main() {
               .having(
                 (s) => s.style?.color,
                 'color',
-                isA<Color>().having((c) => c.alpha, 'alpha', equals(128)),
+                isA<Color>().having(
+                  (c) => (c.a * 255.0).round().clamp(0, 255),
+                  'alpha',
+                  equals(128),
+                ),
               ),
         ),
       );

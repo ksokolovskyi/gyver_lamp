@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, document_ignores
 
 import 'package:control_repository/control_repository.dart';
 import 'package:test/test.dart';

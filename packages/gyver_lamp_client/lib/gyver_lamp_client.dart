@@ -1,5 +1,5 @@
 /// Client to communicate with the Gyver Lamp
-library gyver_lamp_client;
+library;
 
 export 'src/gyver_lamp_client.dart';
 export 'src/parser.dart';

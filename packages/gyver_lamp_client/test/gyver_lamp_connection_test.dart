@@ -1,3 +1,5 @@
+// ignore_for_file: document_ignores, prefer_const_constructors
+
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
@@ -32,7 +34,6 @@ void main() {
       port,
     );
 
-    // ignore: prefer_const_constructors
     final debugResponse = GyverLampOkResponse(timestamp: '11.22.63');
 
     late GyverLampConnection subject;

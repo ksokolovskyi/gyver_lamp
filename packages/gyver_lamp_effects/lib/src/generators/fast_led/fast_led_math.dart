@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, document_ignores
 
 /// FastLED 8-bit math functions.
 ///

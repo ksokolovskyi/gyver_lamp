@@ -27,7 +27,12 @@ void main() {
       );
 
       expect(find.byType(Fidgeter), findsOneWidget);
-      expect(find.byType(ColoredBox), findsOneWidget);
+      expect(
+        find.byWidgetPredicate(
+          (widget) => widget is ColoredBox && widget.color == Colors.red,
+        ),
+        findsOneWidget,
+      );
       expect(find.byIcon(GyverLampIcons.done), findsOneWidget);
     });
 

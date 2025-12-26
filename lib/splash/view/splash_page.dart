@@ -23,16 +23,15 @@ class SplashPageState extends State<SplashPage>
   AnimationController? get debugAnimationController {
     AnimationController? controller;
 
-    // ignore: prefer_asserts_with_message
     assert(() {
       controller = _controller;
       return true;
-    }());
+    }(), '');
 
     return controller;
   }
 
-  late final _animation = TweenSequence<double>(
+  late final Animation<double> _animation = TweenSequence<double>(
     [
       TweenSequenceItem(
         tween: CurveTween(curve: Curves.easeInQuad),

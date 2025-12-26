@@ -1,3 +1,5 @@
+// ignore_for_file: document_ignores
+
 import 'package:gyver_lamp_client/src/src.dart';
 import 'package:meta/meta.dart';
 

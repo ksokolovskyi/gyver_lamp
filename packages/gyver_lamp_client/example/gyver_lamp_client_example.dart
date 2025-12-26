@@ -1,4 +1,4 @@
-// ignore_for_file: inference_failure_on_instance_creation, avoid_print
+// ignore_for_file: inference_failure_on_instance_creation, avoid_print, document_ignores, lines_longer_than_80_chars
 
 import 'package:gyver_lamp_client/gyver_lamp_client.dart';
 

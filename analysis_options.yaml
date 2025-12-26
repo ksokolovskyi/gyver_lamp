@@ -6,3 +6,8 @@ formatter:
 linter:
   rules:
     public_member_api_docs: false
+
+analyzer:
+  errors:
+    avoid_catches_without_on_clauses: ignore
+    discarded_futures: ignore

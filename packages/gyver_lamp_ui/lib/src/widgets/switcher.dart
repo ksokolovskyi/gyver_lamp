@@ -185,8 +185,8 @@ class SwitcherState extends State<Switcher>
     final textDirection = Directionality.of(context);
 
     final splashColor = widget.value
-        ? theme.background.withOpacity(0.1)
-        : theme.textSecondary.withOpacity(0.1);
+        ? theme.background.withValues(alpha: 0.1)
+        : theme.textSecondary.withValues(alpha: 0.1);
 
     return RepaintBoundary(
       child: Semantics(
@@ -198,10 +198,10 @@ class SwitcherState extends State<Switcher>
           onHorizontalDragEnd: _handleDragEnd,
           child: buildToggleable(
             size: _kSwitchSize,
-            mouseCursor: MaterialStateProperty.resolveWith<MouseCursor>(
+            mouseCursor: WidgetStateProperty.resolveWith<MouseCursor>(
               (states) {
-                return MaterialStateProperty.resolveAs<MouseCursor>(
-                  MaterialStateMouseCursor.clickable,
+                return WidgetStateProperty.resolveAs<MouseCursor>(
+                  WidgetStateMouseCursor.clickable,
                   states,
                 );
               },
@@ -223,8 +223,8 @@ class SwitcherState extends State<Switcher>
               ..inactiveTrackColor = theme.surfaceVariant
               ..inactiveReactionColor = Colors.transparent
               ..reactionColor = Colors.transparent
-              ..isFocused = states.contains(MaterialState.focused)
-              ..isHovered = states.contains(MaterialState.hovered)
+              ..isFocused = states.contains(WidgetState.focused)
+              ..isHovered = states.contains(WidgetState.hovered)
               ..position = position
               ..positionController = positionController
               ..downPosition = downPosition

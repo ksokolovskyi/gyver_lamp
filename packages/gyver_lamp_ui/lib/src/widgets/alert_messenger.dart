@@ -51,7 +51,6 @@ class AlertMessenger extends StatefulWidget {
   static AlertMessengerState of(BuildContext context) {
     final state = context.findAncestorStateOfType<AlertMessengerState>();
 
-    // ignore: prefer_asserts_with_message
     assert(() {
       if (state == null) {
         throw FlutterError.fromParts(<DiagnosticsNode>[
@@ -67,7 +66,7 @@ class AlertMessenger extends StatefulWidget {
       }
 
       return true;
-    }());
+    }(), '');
 
     return state!;
   }
@@ -286,8 +285,8 @@ class _Alert extends StatelessWidget {
       case _AlertType.error:
         backgroundColor = theme.notConnectedBackground;
         textColor = theme.notConnectedText;
-        dividerColor = textColor.withOpacity(0.25);
-        borderColor = textColor.withOpacity(0.10);
+        dividerColor = textColor.withValues(alpha: 0.25);
+        borderColor = textColor.withValues(alpha: 0.10);
 
       case _AlertType.info:
         backgroundColor = theme.surfacePrimary;

@@ -12,7 +12,7 @@ const _kMenuItemHeight = 48.0;
 const _kMenuDividerHeight = 2.0;
 
 // The max height of the menu item including divider.
-const _kMaxMenuItemHeight = _kMenuItemHeight + _kMenuDividerHeight;
+const double _kMaxMenuItemHeight = _kMenuItemHeight + _kMenuDividerHeight;
 
 // The size of the icons.
 const _kIconSize = 24.0;
@@ -21,10 +21,10 @@ const _kIconSize = 24.0;
 const _kBorderRadius = BorderRadius.all(Radius.circular(8));
 
 // The distance from bottom of the button to the menu.
-const _kDropdownOffset = GyverLampSpacings.xs;
+const double _kDropdownOffset = GyverLampSpacings.xs;
 
 // The space around menu.
-const _kDropdownPadding = GyverLampSpacings.sm;
+const double _kDropdownPadding = GyverLampSpacings.sm;
 
 /// {@template custom_dropdown_menu_item}
 /// An item in a menu created by [CustomDropdownButton].
@@ -209,7 +209,7 @@ class _CustomDropdownButtonState<T extends Object>
           type: MaterialType.transparency,
           child: InkWell(
             splashFactory: InkRipple.splashFactory,
-            mouseCursor: MaterialStateMouseCursor.clickable,
+            mouseCursor: WidgetStateMouseCursor.clickable,
             borderRadius: _kBorderRadius,
             onTap: _onTap,
             child: Padding(
@@ -258,8 +258,8 @@ class _CustomDropdownButtonState<T extends Object>
                               clipBehavior: Clip.antiAlias,
                               alignment: AlignmentDirectional.centerStart,
                               children: <Widget>[
-                                if (previousChild != null) previousChild,
-                                if (currentChild != null) currentChild,
+                                ?previousChild,
+                                ?currentChild,
                               ],
                             );
                           },
@@ -585,6 +585,7 @@ class _DropdownMenuRouteLayout<T extends Object>
 class CustomDropdownMenu<T extends Object> extends StatefulWidget {
   /// {@macro custom_dropdown_menu}
   const CustomDropdownMenu({
+    // This widget is not used directly, so we can ignore this lint warning.
     // ignore: library_private_types_in_public_api
     required this.route,
     required this.menuConstraints,
@@ -599,8 +600,7 @@ class CustomDropdownMenu<T extends Object> extends StatefulWidget {
   final BoxConstraints menuConstraints;
 
   @override
-  // ignore: library_private_types_in_public_api
-  _CustomDropdownMenuState<T> createState() => _CustomDropdownMenuState<T>();
+  State<CustomDropdownMenu<T>> createState() => _CustomDropdownMenuState<T>();
 }
 
 class _CustomDropdownMenuState<T extends Object>

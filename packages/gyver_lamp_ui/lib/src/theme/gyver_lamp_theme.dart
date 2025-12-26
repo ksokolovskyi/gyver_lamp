@@ -12,14 +12,13 @@ abstract class GyverLampTheme {
       useMaterial3: false,
       colorScheme: const ColorScheme.light().copyWith(
         surface: GyverLampColors.lightSurfacePrimary,
-        background: GyverLampColors.lightBackground,
       ),
       scaffoldBackgroundColor: GyverLampColors.lightBackground,
       textTheme: GyverLampTextStyles.textTheme,
       inputDecorationTheme: InputDecorationTheme(
-        border: MaterialStateOutlineInputBorder.resolveWith(
+        border: WidgetStateInputBorder.resolveWith(
           (states) {
-            if (states.contains(MaterialState.focused)) {
+            if (states.contains(WidgetState.focused)) {
               return const OutlineInputBorder(
                 borderSide: BorderSide(
                   color: GyverLampColors.lightBorderInput,
@@ -45,7 +44,7 @@ abstract class GyverLampTheme {
         filled: true,
         fillColor: GyverLampColors.lightSurfacePrimary,
         hintStyle: GyverLampTextStyles.body2.copyWith(
-          color: GyverLampColors.lightTextSecondary.withOpacity(0.5),
+          color: GyverLampColors.lightTextSecondary.withValues(alpha: 0.5),
         ),
         suffixIconColor: GyverLampColors.lightTextSecondary,
       ),
@@ -98,14 +97,13 @@ abstract class GyverLampTheme {
       useMaterial3: false,
       colorScheme: const ColorScheme.dark().copyWith(
         surface: GyverLampColors.darkSurfacePrimary,
-        background: GyverLampColors.darkBackground,
       ),
       scaffoldBackgroundColor: GyverLampColors.darkBackground,
       textTheme: GyverLampTextStyles.textTheme,
       inputDecorationTheme: InputDecorationTheme(
-        border: MaterialStateOutlineInputBorder.resolveWith(
+        border: WidgetStateInputBorder.resolveWith(
           (states) {
-            if (states.contains(MaterialState.focused)) {
+            if (states.contains(WidgetState.focused)) {
               return const OutlineInputBorder(
                 borderSide: BorderSide(
                   color: GyverLampColors.darkBorderInput,
@@ -131,7 +129,7 @@ abstract class GyverLampTheme {
         filled: true,
         fillColor: GyverLampColors.darkSurfacePrimary,
         hintStyle: GyverLampTextStyles.body2.copyWith(
-          color: GyverLampColors.darkTextSecondary.withOpacity(0.5),
+          color: GyverLampColors.darkTextSecondary.withValues(alpha: 0.5),
         ),
         suffixIconColor: GyverLampColors.darkTextSecondary,
       ),

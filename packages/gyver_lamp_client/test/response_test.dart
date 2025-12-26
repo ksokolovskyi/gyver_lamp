@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, document_ignores
 
 import 'package:gyver_lamp_client/gyver_lamp_client.dart';
 import 'package:test/test.dart';

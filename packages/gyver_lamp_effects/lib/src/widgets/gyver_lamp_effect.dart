@@ -37,7 +37,11 @@ class GyverLampEffect extends StatefulWidget {
 }
 
 class _GyverLampEffectState extends State<GyverLampEffect> {
-  static const _generators = {
+  static const Map<
+    GyverLampEffectType,
+    FramesGenerator Function({required int dimension})
+  >
+  _generators = {
     GyverLampEffectType.sparkles: SparklesFramesGenerator.new,
     GyverLampEffectType.fire: FireFramesGenerator.new,
     GyverLampEffectType.verticalRainbow: VerticalRainbowFramesGenerator.new,
@@ -148,7 +152,7 @@ class _GyverLampEffectState extends State<GyverLampEffect> {
                     tileMode: TileMode.mirror,
                   ),
                   inner: ui.ColorFilter.mode(
-                    Colors.white.withOpacity(0.05),
+                    Colors.white.withValues(alpha: 0.05),
                     BlendMode.lighten,
                   ),
                 ),

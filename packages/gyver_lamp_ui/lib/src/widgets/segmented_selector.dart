@@ -401,7 +401,7 @@ class _SegmentedSelectorState<T extends Object>
   }
 
   void _onEnd(DragEndDetails details) {
-    final pressed = this._pressed;
+    final pressed = _pressed;
 
     if (_isThumbDragging) {
       _playThumbScaleAnimation(isExpanding: true);

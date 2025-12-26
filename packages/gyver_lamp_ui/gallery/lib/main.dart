@@ -10,7 +10,7 @@ void main() {
       textTheme: GalleryTextStyles.textTheme,
       colorScheme: const ColorScheme.light(
         primary: GalleryColors.darkBlue,
-        background: GalleryColors.background,
+        surface: GalleryColors.background,
       ),
       scaffoldBackgroundColor: GalleryColors.background,
     ),

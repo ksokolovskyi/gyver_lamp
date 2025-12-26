@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, document_ignores
 
 import 'package:connection_repository/connection_repository.dart';
 import 'package:flutter_test/flutter_test.dart';

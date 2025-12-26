@@ -7,7 +7,7 @@ import 'package:gyver_lamp_ui/gyver_lamp_ui.dart';
 import 'package:tactile_feedback/tactile_feedback.dart';
 
 // The update animation curve.
-const _kUpdateAnimationCurve = Curves.easeInOut;
+const Cubic _kUpdateAnimationCurve = Curves.easeInOut;
 
 // The duration of update animation.
 const _kUpdateAnimationDuration = Duration(milliseconds: 250);
@@ -36,7 +36,7 @@ const _kLargeMarkSize = Size(kMarkWidth, 18);
 
 /// The width of gap between marks.
 @visibleForTesting
-const kGapWidth = GyverLampSpacings.sm;
+const double kGapWidth = GyverLampSpacings.sm;
 
 // The corner radius of the ruler.
 const _kBorderRadius = Radius.circular(8);

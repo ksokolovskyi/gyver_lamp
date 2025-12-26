@@ -183,7 +183,7 @@ class ConnectionStatusBadgeState extends State<ConnectionStatusBadge> {
                                         child: previousChild,
                                       ),
                                     ),
-                                  if (currentChild != null) currentChild,
+                                  ?currentChild,
                                 ],
                               );
                             },

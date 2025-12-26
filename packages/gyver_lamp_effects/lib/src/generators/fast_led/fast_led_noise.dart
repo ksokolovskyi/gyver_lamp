@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, document_ignores, lines_longer_than_80_chars
 
 import 'package:gyver_lamp_effects/src/generators/fast_led/fast_led.dart';
 
@@ -75,6 +75,7 @@ abstract class FastLedNoise {
     return FastLedMath.lerp7by8(Y1, Y2, w);
   }
 
+  // dart format off
   static const _p = [
     151, 160, 137, 91, 90, 15, 131, 13, 201, 95, 96, 53, 194, 233, 7, 225, //
     140, 36, 103, 30, 69, 142, 8, 99, 37, 240, 21, 10, 23, 190, 6, 148,
@@ -91,23 +92,7 @@ abstract class FastLedNoise {
     218, 246, 97, 228, 251, 34, 242, 193, 238, 210, 144, 12, 191, 179, 162, 241,
     81, 51, 145, 235, 249, 14, 239, 107, 49, 192, 214, 31, 181, 199, 106, 157,
     184, 84, 204, 176, 115, 121, 50, 45, 127, 4, 150, 254, 138, 236, 205, 93,
-    222,
-    114,
-    67,
-    29,
-    24,
-    72,
-    243,
-    141,
-    128,
-    195,
-    78,
-    66,
-    215,
-    61,
-    156,
-    180,
-    151,
-    // ignore: require_trailing_commas
+    222, 114, 67, 29, 24, 72, 243, 141, 128, 195, 78, 66, 215, 61, 156, 180, 151,
   ];
+  // dart format on
 }
